@@ -1,3 +1,150 @@
 .navbar-main-container {
-	background-color: red;
+	/* background-color: red; */
+}
+
+.app-header-wrapper {
+	/* position: relative;
+	z-index: 500; */
+	background-color: white;
+	justify-content: center;
+}
+
+.hamburger-menu {
+	display: none;
+}
+
+.app-header {
+	height: 60px;
+	position: relative;
+	z-index: 10;
+	background-color: transparent;
+	width: 1275px;
+}
+
+.app-title {
+	line-height: 60px;
+	vertical-align: middle;
+	font-size: 1.35em;
+}
+
+.app-branding {
+	/* display: none; */
+	list-style-type: none;
+	float: left;
+	background-color: transparent;
+	width: 250px;
+	height: 100%;
+	margin-top: 0rem;
+	padding-left: 4rem;
+	margin-left: -12rem;
+}
+
+.app-branding li a {
+	text-decoration: none;
+	line-height: 60px;
+	margin-left: -5.5rem;
+}
+
+.app-options {
+	background-color: transparent;
+	float: right;
+}
+
+.app-nav ul {
+	list-style-position: none;
+	padding: 0;
+	color: black;
+	display: inline;
+}
+
+.app-nav ul li {
+	list-style-type: none;
+	display: inline-block;
+	cursor: pointer;
+	font-family: 'Open Sans';
+	font-weight: 600;
+	/* font-family: 'Poppins'; */
+}
+
+.app-nav ul li a {
+	display: inline-block;
+	line-height: 60px;
+	vertical-align: middle;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-decoration: none;
+}
+
+.app-nav ul li a:hover {
+	color: #ff5757;
+}
+
+.app-nav ul li a.active {
+	color: #ff5757;
+}
+
+.menu-icon {
+	margin-top: 8px;
+}
+
+.navlink {
+	text-decoration: none;
+	color: black;
+}
+
+.menu-icon-authenticated {
+	background-color: transparent;
+	position: fixed;
+
+	margin-left: 2rem;
+	z-index: 100;
+	top: 10;
+	left: 0;
+}
+
+.avatar-picture {
+	position: relative;
+	z-index: 5000;
+	/* background-color: white; */
+}
+
+.avatar-picture-img {
+	display: none;
+	border-radius: 50%;
+	height: 2.75rem;
+	width: 2.75rem;
+	margin-top: 0.75rem;
+	transition: all 0.2s ease-in-out;
+	margin-top: -0.2rem;
+}
+
+.avatar-picture-img:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+	.hamburger-menu {
+		display: inline;
+		position: absolute;
+		right: 0;
+	}
+	.app-nav ul li a {
+		display: none;
+	}
+
+	.app-nav .menu-items {
+		display: none;
+	}
+
+	.app-branding {
+		/* margin-left: -2%; */
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 768px) {
+	.menu-icon {
+		display: none;
+	}
 }

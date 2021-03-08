@@ -1,0 +1,137 @@
+.skills-main-container {
+	background-color: white;
+	height: 100vh;
+	overflow: auto;
+	font-family: 'Open Sans';
+	/* display: flex; */
+}
+
+.spacer {
+	background-color: transparent;
+	width: 100%;
+	height: 6rem;
+}
+
+.skills-title {
+	background-color: transparent;
+	position: relative;
+	margin: 0 auto;
+}
+
+.skills-description {
+	text-align: left;
+	font-size: 1.3rem;
+	margin-top: 1rem;
+	position: relative;
+	margin: 0 auto;
+	background-color: transparent;
+	width: 40%;
+	display: inline;
+}
+
+.skills-description p {
+	/* margin-left: 2rem; */
+	margin-left: 0.65rem;
+}
+
+.skills-content {
+	background-color: transparent;
+	text-align: left;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 5rem;
+	height: auto;
+	/* display: flex; */
+	/* position: relative; */
+	/* margin-top: 4rem;
+	background-color: blue;
+	width: 60vw;
+	margin: 0 auto;
+	height: 70vh; */
+}
+
+.skills-main-container h1 {
+	font-weight: 800;
+	font-size: 3rem;
+	/* margin-top: -0rem;
+	height: 5rem; */
+	background-color: transparent;
+	/* display: inline; */
+	/* background-color: red; */
+	/* width: 65%;
+	margin: 0 auto; */
+}
+
+.columns.languages {
+	background-color: transparent;
+}
+
+.columns {
+	background-color: transparent;
+	height: 100%;
+	/* text-align: center; */
+}
+
+.columns ul {
+	display: inline-block;
+	text-align: left;
+}
+
+.languages {
+	background-color: transparent;
+}
+
+.columns h2 {
+	margin-bottom: 3rem;
+	/* margin-left: -2rem; */
+}
+
+.skills-content li {
+	list-style-type: none;
+	font-family: 'Open Sans';
+	margin-bottom: 4rem;
+	margin-left: -2rem;
+	font-size: 1.5rem;
+	/* font-size: 1.5rem;
+	margin-left: -2.5rem;
+	margin-bottom: 4rem; */
+}
+
+/* .tools li {
+	margin-left: -3rem;
+} */
+
+/* .libraries li {
+	margin-left: -10rem;
+} */
+
+@media (max-width: 768px) {
+	.skills-main-container {
+		height: auto;
+	}
+
+	.spacer {
+		height: 1rem;
+	}
+
+	.columns h2 {
+		margin-bottom: 2rem;
+	}
+
+	.skills-content li {
+		margin-bottom: 2rem;
+	}
+
+	.columns.languages {
+		background-color: transparent;
+		margin-left: 1rem;
+	}
+
+	.columns.libraries {
+		margin-left: 1rem;
+	}
+
+	.columns.tools {
+		margin-left: 1rem;
+	}
+}

@@ -1,10 +1,212 @@
 import { React, useState } from 'react';
 import './Navbar.css';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Slide from '@material-ui/core/Slide';
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { NavLink } from 'react-router-dom';
+import BackToTop from './BackToTop';
+import {
+	Container,
+	Hidden,
+	IconButton,
+	List,
+	ListItem,
+	ListItemText,
+	Fab,
+} from '@material-ui/core';
+import { Home, KeyboardArrowUp } from '@material-ui/icons';
+import MenuIcon from '@material-ui/icons/Menu';
+import clsx from 'clsx';
+import SideDrawer from './SideDrawer/SideDrawer';
+import JuanLogo from '../Logo/portfoliologo.svg';
+import { Link, animateScroll as scroll } from 'react-scroll';
+import DarkModeToggle from 'react-dark-mode-toggle';
+
+const drawerWidth = 300;
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+		background: 'transparent',
+		borderRadius: 3,
+		border: 0,
+		color: '#1B2737',
+		height: 48,
+		padding: '0 30px',
+		boxShadow: 'none',
+		marginTop: '0.45rem',
+		'&:hover': {
+			// backgroundColor: 'green',
+			// color: 'white',
+		},
+
+		fontFamily: 'Poppins',
+		fontWeight: '600',
+	},
+
+	label: {
+		textTransform: 'capitalize',
+	},
+}));
+
+//hides navbar after some scrolling
+function HideOnScroll(props) {
+	const { children, window } = props;
+	let trigger = useScrollTrigger({ target: window ? window() : undefined });
+	let appear = false;
+	let direction = 'down';
+	let inn = !trigger;
+
+	//disables the hide on scroll effect if the user is logged in
+	if (props.authenticated === true) {
+		appear = true;
+		direction = '';
+		inn = true;
+	}
+
+	return (
+		<Slide appear={appear} direction={direction} in={inn}>
+			{children}
+		</Slide>
+	);
+}
 
 export default function Navbar(props) {
+	const theme = useTheme();
+	const classes = useStyles();
+	const [anchorEl, setAnchorEl] = useState(null);
+	const [open, setOpen] = useState(false);
+	const [isDarkMode, setIsDarkMode] = useState(() => false);
+
+	let menuClass = 'not-mobile';
+
 	return (
 		<div className="navbar-main-container">
-			<h1>Navbar</h1>
+			<HideOnScroll {...props}>
+				<AppBar
+					position="fixed"
+					style={{
+						background: 'transparent',
+						// boxShadow: 'none',
+					}}
+				>
+					<Toolbar
+						className="app-header-wrapper"
+						style={{ color: 'red' }}
+						// id="back-to-top-anchor"
+					>
+						{/* will load 2 different side drawers depending if user is authenticated or not*/}
+						<div className="hamburger-menu">
+							<SideDrawer />
+						</div>
+
+						{/* goes to home when logo is clicked */}
+						<div className="app-header">
+							<ul className="app-branding">
+								<li>
+									<Button
+										classes={{
+											root: classes.root,
+											label: classes.label,
+										}}
+										style={{ fontSize: '20px' }}
+									>
+										{/* <PetsIcon
+												style={{
+													minWidth: '40px',
+												}}
+											/> */}
+										<img
+											style={{
+												backgroundColor: 'transparent',
+											}}
+											src={JuanLogo}
+											height="42rem"
+										/>
+									</Button>
+								</li>
+							</ul>
+
+							<div className="app-options">
+								{/* will load different navbar content depending if user is authenticated */}
+								<nav className="app-nav">
+									<ul className="menu-items">
+										<li>
+											<Link
+												activeClass="active"
+												to="skills"
+												spy={true}
+												smooth={true}
+												offset={0}
+												duration={500}
+											>
+												<a>Skills</a>
+											</Link>
+										</li>
+										<li>
+											<Link
+												activeClass="active"
+												to="projects"
+												spy={true}
+												smooth={true}
+												offset={0}
+												duration={500}
+											>
+												<a>Projects</a>
+											</Link>
+										</li>
+										<li>
+											<Link
+												activeClass="active"
+												to="contact"
+												spy={true}
+												smooth={true}
+												offset={0}
+												duration={500}
+											>
+												<a>Contact Me</a>
+											</Link>
+										</li>
+										<li>
+											<a>Resume</a>
+										</li>
+										<li>
+											<a
+												style={{
+													// backgroundColor: 'tr',
+													height: '1.5rem',
+												}}
+											>
+												<DarkModeToggle
+													onChange={setIsDarkMode}
+													checked={isDarkMode}
+													size={50}
+												/>
+											</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</Toolbar>
+				</AppBar>
+			</HideOnScroll>
+			<Toolbar id="back-to-top-anchor" />
+
+			<BackToTop>
+				<Fab
+					style={{ backgroundColor: '#FF5757', color: 'white' }}
+					size="large"
+					aria-label="scroll back to top"
+				>
+					<KeyboardArrowUp />
+				</Fab>
+			</BackToTop>
 		</div>
 	);
 }

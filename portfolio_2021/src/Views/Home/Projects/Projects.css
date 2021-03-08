@@ -1,0 +1,30 @@
+.projects-main-container {
+	background-color: transparent;
+	height: 100vh;
+}
+
+.projects-main-container h1 {
+	font-weight: 800;
+	font-size: 3rem;
+	/* margin-top: -0rem;
+	height: 5rem; */
+	background-color: transparent;
+	/* display: inline; */
+	/* background-color: red; */
+	/* width: 65%;
+	margin: 0 auto; */
+}
+
+.projects-content {
+	background-color: seagreen;
+	height: 60vh;
+	margin: 0 auto;
+}
+
+/* .project-columns {
+	background-color: red;
+} */
+/* 
+.project-columns .first {
+	background-color: salmon;
+} */
