@@ -7,7 +7,7 @@ export default function Contact(props) {
 	return (
 		<div className="contact-main-container" id="contact">
 			<div className="spacer"></div>
-			<Grid container lg={7} md={9} className="skills-title">
+			<Grid container lg={9} md={9} className="skills-title">
 				<h1>
 					{' '}
 					<h2

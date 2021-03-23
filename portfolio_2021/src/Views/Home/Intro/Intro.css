@@ -3,10 +3,12 @@
 	height: 95.2vh;
 	text-align: center;
 	font-family: 'Open Sans';
+
 	/* margin-top: 0rem; */
 }
 
 .greeting {
+	overflow-y: hidden;
 	background-color: transparent;
 	margin-top: 13%;
 }

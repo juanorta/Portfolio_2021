@@ -5,9 +5,15 @@ import Grid from '@material-ui/core/Grid';
 
 export default function Skills(props) {
 	return (
-		<div className="skills-main-container" id="skills">
+		<div
+			className="skills-main-container"
+			id="skills"
+			style={{
+				overflowY: 'hidden',
+			}}
+		>
 			<div className="spacer"></div>
-			<Grid container lg={7} md={9} className="skills-title">
+			<Grid container lg={9} md={9} className="skills-title">
 				<h1>
 					{' '}
 					<h2
@@ -23,7 +29,7 @@ export default function Skills(props) {
 					Skills
 				</h1>
 			</Grid>
-			<Grid container lg={7} md={9} className="skills-description">
+			<Grid container lg={9} md={9} className="skills-description">
 				<Grid item lg={5}>
 					<p>
 						Through my studies, I've gained a solid understanding of
@@ -35,11 +41,10 @@ export default function Skills(props) {
 			</Grid>
 			<Grid
 				container
-				lg={7}
+				lg={9}
 				md={9}
 				className="skills-content"
 				style={{ overflowY: 'hidden' }}
-				// spacing={0}
 			>
 				<Grid item lg={4} xs={10} className="columns languages">
 					{' '}
@@ -82,7 +87,7 @@ export default function Skills(props) {
 						</h2>
 						Libraries & Frameworks
 					</h2>
-					<ul>
+					<ul className="libraries-ul">
 						<li>Spring Boot</li>
 						<li>React</li>
 						<li>Node</li>
@@ -108,7 +113,7 @@ export default function Skills(props) {
 						</h2>
 						Tools & Microservices
 					</h2>
-					<ul>
+					<ul className="tools-ul">
 						<li>Amazon Web Services</li>
 						<li>Google Cloud</li>
 						<li>Digital Ocean</li>

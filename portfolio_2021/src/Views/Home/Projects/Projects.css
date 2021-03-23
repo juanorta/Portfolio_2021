@@ -1,6 +1,7 @@
 .projects-main-container {
 	background-color: transparent;
 	height: 100vh;
+	font-family: 'Open Sans';
 }
 
 .projects-main-container h1 {
@@ -16,11 +17,126 @@
 }
 
 .projects-content {
-	background-color: seagreen;
+	background-color: transparent;
 	height: 60vh;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+.first {
+	background-color: transparent;
 	margin: 0 auto;
 }
 
+.project {
+	overflow-y: hidden;
+	background-color: transparent;
+	height: 35rem;
+	position: relative;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.67);
+	width: 97%;
+	margin-left: 1%;
+	overflow: auto;
+	margin-top: 1rem;
+}
+
+.gif-container {
+	background-color: transparent;
+	height: 20rem;
+	/* width: 95%; */
+	margin: 0 auto;
+	/* box-shadow: 0 1px 6px rgba(0, 0, 0, 0.67); */
+	margin-top: 2rem;
+}
+
+.gif_player {
+	height: 100%;
+	width: 100%;
+	margin-top: 0.25rem;
+}
+
+.gif_player:hover {
+	cursor: pointer;
+}
+
+.play_button {
+	color: 'red';
+}
+
+.info-section {
+	background-color: transparent;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 13rem;
+	text-align: left;
+}
+.title-description {
+	background-color: transparent;
+	width: 90%;
+	/* margin-left: 8%; */
+	margin: 0 auto;
+}
+
+.button-group {
+	background-color: transparent;
+	height: 4rem;
+	width: 9.5rem;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+.button-group Button {
+	/* background-color: #ff5757; */
+	margin-top: 1rem;
+	font-weight: 700;
+}
+
+.button-group Button:hover {
+	/* background-color: #ff5757; */
+}
+
+.second {
+	background-color: transparent;
+	margin: 0 auto;
+	/* height: 80vh; */
+}
+/* 
+.third {
+	background-color: transparent;
+	margin: 0 auto;
+	/* margin-bottom: 1rem; */
+
+@media (max-width: 768px) {
+	.projects-content {
+		height: 200vh;
+	}
+
+	.project {
+		background-color: transparent;
+		height: 30rem;
+		position: relative;
+		box-shadow: 0 1px 6px rgba(0, 0, 0, 0.67);
+		width: 97%;
+		margin-left: 1%;
+		overflow: auto;
+		margin-top: 1rem;
+		overflow-y: hidden;
+		z-index: 999;
+	}
+
+	.gif-container {
+		height: 13rem;
+	}
+
+	.info-section {
+		bottom: 2rem;
+	}
+
+	.projects-main-container {
+		height: auto;
+	}
+}
 /* .project-columns {
 	background-color: red;
 } */

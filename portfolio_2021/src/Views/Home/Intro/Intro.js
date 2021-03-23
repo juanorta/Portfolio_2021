@@ -44,7 +44,7 @@ export default function Intro(props) {
 	const classes = useStyles();
 	return (
 		<div className="intro-main-container" style={{ overflowY: 'hidden' }}>
-			<div className="greeting">
+			<div className="greeting" style={{ overflowX: 'hidden' }}>
 				<h1>Hi, I'm Juan</h1>
 				<h2>
 					Fullstack Software{' '}

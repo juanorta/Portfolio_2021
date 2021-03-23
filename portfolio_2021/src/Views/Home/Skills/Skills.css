@@ -97,6 +97,30 @@
 	margin-bottom: 4rem; */
 }
 
+.libraries {
+	background-color: transparent;
+}
+
+.libraries h2 {
+	margin-left: 3rem;
+}
+
+.libraries-ul {
+	margin-left: 6rem;
+}
+
+.tools {
+	background-color: transparent;
+}
+
+.tools h2 {
+	margin-left: 4rem;
+}
+
+.tools-ul {
+	margin-left: 8rem;
+}
+
 /* .tools li {
 	margin-left: -3rem;
 } */
@@ -133,5 +157,29 @@
 
 	.columns.tools {
 		margin-left: 1rem;
+	}
+
+	.libraries {
+		background-color: transparent;
+	}
+
+	.libraries h2 {
+		margin-left: 0;
+	}
+
+	.libraries-ul {
+		margin-left: 0;
+	}
+
+	.tools {
+		background-color: transparent;
+	}
+
+	.tools h2 {
+		margin-left: 0;
+	}
+
+	.tools-ul {
+		margin-left: 0;
 	}
 }
