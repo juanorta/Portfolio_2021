@@ -1,0 +1,53 @@
+.gif {
+	background-color: transparent;
+	width: 70%;
+	height: 100%;
+	float: left;
+}
+
+.project-gif {
+	width: 99%;
+	margin-top: 5%;
+}
+
+.description {
+	background-color: rgb(245, 245, 245);
+	width: 30%;
+	height: 100%;
+	float: right;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.description h2,
+p {
+	margin-left: 0.5rem;
+}
+
+.tech-stack {
+	background-color: transparent;
+	height: auto;
+	width: 100%;
+	justify-content: left;
+	flex-wrap: wrap;
+	display: flex;
+}
+
+.about {
+	width: 98%;
+	justify-content: center;
+}
+
+.project-buttons {
+	background-color: transparent;
+	width: 75%;
+	margin: 0 auto;
+}
+
+.project-buttons a {
+	text-decoration: none;
+}
+
+.project-buttons Button {
+	font-weight: 700;
+}

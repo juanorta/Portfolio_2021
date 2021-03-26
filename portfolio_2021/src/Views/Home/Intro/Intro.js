@@ -76,7 +76,7 @@ export default function Intro(props) {
 						</a>
 					</li>
 					<li className="link" data-tip data-for="resume">
-						<a href="https://www.w3schools.com" target="_blank">
+						<a>
 							<FileCopyIcon className={classes.resume} />
 						</a>
 					</li>

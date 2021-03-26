@@ -4,14 +4,15 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { Button } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import gif from '../../../gifs/giphy.gif';
+
 import cat from '../../../gifs/cat.png';
 import GifPlayer from 'react-gif-player';
-import covidGif from '../../../gifs/covid-portfolio2.gif';
 import covidPreview from '../../../images/covid-preview.png';
 import petsPreview from '../../../images/pets-preview.png';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
+import Modal from '@material-ui/core/Modal';
+import ProjectModal from '../../ProjectModal/ProjectModal';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -51,6 +52,44 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Projects(props) {
 	const classes = useStyles();
+	const [openModal, setOpenModal] = useState(false);
+	const [viewProjectClicked, setViewProjectClicked] = useState(false);
+	const [isCovid, setIsCovid] = useState(false);
+	const [isPet, setIsPet] = useState(false);
+	const [isExercise, setIsExercise] = useState(false);
+
+	const SetOpenModalToFalse = () => {
+		setOpenModal(false);
+		setViewProjectClicked(false);
+	};
+
+	const covidHandler = () => {
+		console.log('open');
+		setIsCovid(true);
+		setIsPet(false);
+		setIsExercise(false);
+		setViewProjectClicked(true);
+		setOpenModal(true);
+	};
+
+	const petHandler = () => {
+		console.log('open');
+		setIsPet(true);
+		setIsCovid(false);
+		setIsExercise(false);
+		setViewProjectClicked(true);
+		setOpenModal(true);
+	};
+
+	const exerciseHandler = () => {
+		console.log('open');
+		setIsExercise(true);
+		setIsCovid(false);
+		setIsPet(false);
+		setViewProjectClicked(true);
+		setOpenModal(true);
+	};
+
 	return (
 		<div className="projects-main-container" id="projects">
 			<div className="spacer"></div>
@@ -101,6 +140,7 @@ export default function Projects(props) {
 							<div className="button-group">
 								<Button
 									className={classes.root}
+									onClick={covidHandler}
 									// variant="outlined"
 									// color="#ff5757"
 								>
@@ -133,6 +173,7 @@ export default function Projects(props) {
 							</div>
 							<div className="button-group">
 								<Button
+									onClick={petHandler}
 									className={classes.root}
 									// variant="outlined"
 									// color="#ff5757"
@@ -163,6 +204,7 @@ export default function Projects(props) {
 							</div>
 							<div className="button-group">
 								<Button
+									onClick={exerciseHandler}
 									className={classes.root}
 									// variant="outlined"
 									// color="#ff5757"
@@ -177,6 +219,16 @@ export default function Projects(props) {
 					</div>
 				</Grid>
 			</Grid>
+
+			{viewProjectClicked ? (
+				<ProjectModal
+					SetOpenModalToFalse={SetOpenModalToFalse}
+					openModal={openModal}
+					isCovid={isCovid}
+					isPet={isPet}
+					isExercise={isExercise}
+				/>
+			) : null}
 		</div>
 	);
 }
