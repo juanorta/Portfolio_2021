@@ -47,8 +47,7 @@ export default function Intro(props) {
 			<div className="greeting" style={{ overflowX: 'hidden' }}>
 				<h1>Hi, I'm Juan</h1>
 				<h2>
-					Fullstack Software{' '}
-					<h2 style={{ color: '#ff5757' }}>Engineer</h2>
+					Software <h2 style={{ color: '#ff5757' }}>Engineer</h2>
 				</h2>
 				<ReactTooltip id="linkedin" place="top" effect="solid">
 					LinkedIn Profile
