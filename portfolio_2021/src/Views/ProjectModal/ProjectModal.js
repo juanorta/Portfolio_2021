@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Fade from '@material-ui/core/Fade';
 import covidGif from '../../gifs/covid-portfolio2.gif';
+import petGif from '../../gifs/pet-tour.gif';
 import GifPlayer from 'react-gif-player';
 import Chip from '@material-ui/core/Chip';
 import { Button } from '@material-ui/core';
@@ -94,7 +95,16 @@ export default function ProjectModal(props) {
 									/>
 								</div>
 							) : null}
-							{isPet ? <h1>My Pet Family</h1> : null}
+							{isPet ? (
+								<div>
+									<h1>My Pet Family</h1>
+									<GifPlayer
+										className="project-gif"
+										gif={petGif}
+										autoplay
+									/>
+								</div>
+							) : null}
 							{isExercise ? <h1>Lift Log IO</h1> : null}
 						</div>
 						<div className="description">
@@ -171,6 +181,67 @@ export default function ProjectModal(props) {
 								</div>
 							) : null}
 
+							{isPet ? (
+								<div className="tech-stack">
+									<Chip
+										className={classes.chip}
+										variant="outlined"
+										label="Java"
+										color="primary"
+									/>
+									<Chip
+										className={classes.chip}
+										variant="outlined"
+										label="Spring Boot"
+										color="primary"
+									/>
+									<Chip
+										className={classes.chip}
+										variant="outlined"
+										label="Spring Security"
+										color="primary"
+									/>
+									<Chip
+										className={classes.chip}
+										variant="outlined"
+										label="Spring JPA"
+										color="primary"
+									/>
+
+									<Chip
+										className={classes.chip}
+										variant="outlined"
+										label="MySQL"
+										color="primary"
+									/>
+									<Chip
+										className={classes.chip}
+										variant="outlined"
+										label="Amazon RDS"
+										color="primary"
+									/>
+
+									<Chip
+										className={classes.chip}
+										variant="outlined"
+										label="Digital Ocean"
+										color="primary"
+									/>
+									<Chip
+										className={classes.chip}
+										variant="outlined"
+										label="ReactJS"
+										color="primary"
+									/>
+									<Chip
+										className={classes.chip}
+										variant="outlined"
+										label="Material-UI"
+										color="primary"
+									/>
+								</div>
+							) : null}
+
 							{isCovid ? (
 								<div>
 									<div className="about">
@@ -232,6 +303,86 @@ export default function ProjectModal(props) {
 										</a>
 										<a
 											href="https://github.com/juanorta/COVID-19_Testing_Locations"
+											target="_blank"
+										>
+											<Button
+												className={classes.viewCode}
+											>
+												<CodeIcon
+													style={{
+														marginRight: '0.5rem',
+													}}
+												/>{' '}
+												View Code
+											</Button>
+										</a>
+									</div>
+								</div>
+							) : null}
+
+							{isPet ? (
+								<div>
+									<div className="about">
+										{' '}
+										<h2>About</h2>
+										<p>
+											A pet manager to help keep track of
+											all your pet needs. Add multiple
+											pets, appointments, food, weights,
+											preventatives, medications, and
+											veterinarians.
+										</p>
+										{/* <p>
+									At the time, there weren't any online maps
+									that showed country-wide COVID-19 testing
+									sites. The only maps that existed were on
+									the local/state level. In an effort to help
+									people out from all over the country, I took
+									it upon myself to build one.
+								</p> */}
+										<p>
+											I built the back-end system with
+											Spring Boot framework due to its
+											flexibility and 'out of the box'
+											features. The authentication system
+											was built with Spring Security and
+											JSON Web Token (JWT).
+										</p>
+										<p>
+											Object models were made in Java and
+											used Jackson annotations to create
+											entity relationships and JPA
+											repository to aid in CRUD
+											operations. Additionally, I created
+											REST API controllers to handle all
+											front-end requests.
+										</p>
+										<p>
+											Finally, I used React and
+											Material-UI to create the user
+											interface. Async/await functions
+											were used to communicate with the
+											backend.
+										</p>
+									</div>
+									<div className="project-buttons">
+										<a
+										// href="https://uscovidtestinglocations.com/"
+										// target="_blank"
+										>
+											<Button
+												className={classes.viewLive}
+											>
+												<CallMadeIcon
+													style={{
+														marginRight: '0.5rem',
+													}}
+												/>{' '}
+												View Live
+											</Button>
+										</a>
+										<a
+											href="https://github.com/juanorta/My_Pets"
 											target="_blank"
 										>
 											<Button
