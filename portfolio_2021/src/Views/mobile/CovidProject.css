@@ -1,0 +1,71 @@
+.covid-main-container {
+	background-color: transparent;
+	height: auto;
+	width: 100%;
+	text-align: left;
+	justify-content: center;
+	overflow: auto;
+	font-family: 'Open Sans';
+	overflow-y: hidden;
+}
+
+.covid-main-container h1 {
+	background-color: transparent;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 2rem;
+}
+
+.project-gif-mobile {
+	/* display: none; */
+	width: 90%;
+	margin: 0 auto;
+	margin-left: 5%;
+	margin-top: 2rem;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.67);
+}
+
+.mobile-sub-container {
+	background-color: transparent;
+	height: auto;
+	width: 100%;
+}
+
+.mobile-tech-stack {
+	background-color: transparent;
+	/* margin-left: -0.25rem; */
+	height: auto;
+	width: 90%;
+	justify-content: left;
+	flex-wrap: wrap;
+	display: flex;
+}
+
+.mobile-about {
+	margin-top: 3rem;
+	width: 90%;
+	background-color: transparent;
+}
+
+.mobile-about p {
+	margin-left: -0.05rem;
+}
+
+.mobile-description {
+	background-color: transparent;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 4rem;
+}
+
+.mobile-project-buttons {
+	background-color: transparent;
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 10rem;
+	margin-top: 4rem;
+}
+
+.mobile-project-buttons a {
+	text-decoration: none;
+}

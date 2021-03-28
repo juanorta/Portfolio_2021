@@ -4,7 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { Button } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-
+import { NavLink } from 'react-router-dom';
 import cat from '../../../gifs/cat.png';
 import GifPlayer from 'react-gif-player';
 import covidPreview from '../../../images/covid-preview.png';
@@ -150,6 +150,21 @@ export default function Projects(props) {
 									View Project{' '}
 								</Button>
 							</div>
+							<div className="mobile-button-group">
+								<NavLink to="/covidProject" className="navlink">
+									<Button
+										// onClick={exerciseHandler}
+										className={classes.root}
+										// variant="outlined"
+										// color="#ff5757"
+									>
+										<VisibilityIcon
+											className={classes.eyeCon}
+										/>{' '}
+										View Project{' '}
+									</Button>
+								</NavLink>
+							</div>
 						</div>
 					</div>
 				</Grid>
@@ -184,6 +199,21 @@ export default function Projects(props) {
 									View Project{' '}
 								</Button>
 							</div>
+							<div className="mobile-button-group">
+								<NavLink to="/myPetFamily" className="navlink">
+									<Button
+										// onClick={exerciseHandler}
+										className={classes.root}
+										// variant="outlined"
+										// color="#ff5757"
+									>
+										<VisibilityIcon
+											className={classes.eyeCon}
+										/>{' '}
+										View Project{' '}
+									</Button>
+								</NavLink>
+							</div>
 						</div>
 					</div>
 				</Grid>
@@ -214,6 +244,21 @@ export default function Projects(props) {
 									/>{' '}
 									View Project{' '}
 								</Button>
+							</div>
+							<div className="mobile-button-group">
+								<NavLink to="/lifLog" className="navlink">
+									<Button
+										// onClick={exerciseHandler}
+										className={classes.root}
+										// variant="outlined"
+										// color="#ff5757"
+									>
+										<VisibilityIcon
+											className={classes.eyeCon}
+										/>{' '}
+										View Project{' '}
+									</Button>
+								</NavLink>
 							</div>
 						</div>
 					</div>

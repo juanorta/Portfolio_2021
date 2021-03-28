@@ -140,6 +140,7 @@
 	.app-branding {
 		/* margin-left: -2%; */
 		margin: 0 auto;
+		margin-left: 2rem;
 	}
 }
 

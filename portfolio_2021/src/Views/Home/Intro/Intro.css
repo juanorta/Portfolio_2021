@@ -11,6 +11,16 @@
 	overflow-y: hidden;
 	background-color: transparent;
 	margin-top: 13%;
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+	/* 
+	-webkit-animation: fadeInOpacity ease 0.5s;
+	-moz-animation: fadeInOpacity ease 0.5s;
+	-o-animation: fadeInOpacity ease 0.5s;
+	-ms-animation: fadeInOpacity ease 0.5s; */
 }
 
 .greeting h1 {
@@ -93,6 +103,15 @@
 	}
 	60% {
 		transform: translateY(-15px);
+	}
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
 

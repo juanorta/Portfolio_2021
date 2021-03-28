@@ -3,27 +3,21 @@ import './App.css';
 import Navbar from './Navbar/Navbar';
 import BackToTop from './Navbar/BackToTop';
 import Home from './Views/Home/Home';
-
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import CovidProject from './Views/mobile/CovidProject';
+import PetProject from './Views/mobile/PetProject';
+import ExerciseProject from './Views/mobile/ExerciseProject';
 function App() {
 	return (
 		<div className="App">
-			<Navbar />
-			<Home />
-
-			{/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+			{/* <Home /> */}
+			<Router>
+				<Navbar />
+				<Route exact path="/" component={Home}></Route>
+				<Route exact path="/covidProject" component={CovidProject} />
+				<Route exact path="/myPetFamily" component={PetProject} />
+				<Route exact path="/liftLog" component={ExerciseProject} />
+			</Router>
 		</div>
 	);
 }

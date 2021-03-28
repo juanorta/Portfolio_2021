@@ -109,26 +109,29 @@ export default function Navbar(props) {
 						<div className="app-header">
 							<ul className="app-branding">
 								<li>
-									<Button
-										classes={{
-											root: classes.root,
-											label: classes.label,
-										}}
-										style={{ fontSize: '20px' }}
-									>
-										{/* <PetsIcon
+									<NavLink to="/" className="navlink">
+										<Button
+											classes={{
+												root: classes.root,
+												label: classes.label,
+											}}
+											style={{ fontSize: '20px' }}
+										>
+											{/* <PetsIcon
 												style={{
 													minWidth: '40px',
 												}}
 											/> */}
-										<img
-											style={{
-												backgroundColor: 'transparent',
-											}}
-											src={JuanLogo}
-											height="42rem"
-										/>
-									</Button>
+											<img
+												style={{
+													backgroundColor:
+														'transparent',
+												}}
+												src={JuanLogo}
+												height="42rem"
+											/>
+										</Button>
+									</NavLink>
 								</li>
 							</ul>
 

@@ -326,9 +326,10 @@ export default function ProjectModal(props) {
 										{' '}
 										<h2>About</h2>
 										<p>
-											A pet manager to help keep track of
-											all your pet needs. Add multiple
-											pets, appointments, food, weights,
+											My Pet Family is a pet manager to
+											help keep track of all your pet
+											needs. Add multiple pets,
+											appointments, food, weights,
 											preventatives, medications, and
 											veterinarians.
 										</p>
