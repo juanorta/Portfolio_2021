@@ -1,9 +1,29 @@
 .contact-main-container {
-	background-color: transparent;
+	background-color: white;
 	height: 100vh;
+	justify-content: center;
+}
+
+.contact-title {
+	background-color: transparent;
+	margin: 0 auto;
+	/* height: 15rem;
+	width: 10rem; */
+}
+
+.contact-title h1 {
+	margin: 0 auto;
 }
 
 .contact-main-container h1 {
 	font-weight: 800;
 	font-size: 3rem;
+}
+
+.form-grid {
+	background-color: transparent;
+	margin: 0 auto;
+}
+
+.form {
 }
