@@ -117,7 +117,7 @@ export default function Skills(props) {
 						<li>Amazon Web Services</li>
 						<li>Google Cloud</li>
 						<li>Digital Ocean</li>
-						<li>Docker</li>
+						{/* <li>Docker</li> */}
 						<li>Git</li>
 						<li>Postman</li>
 					</ul>
