@@ -81,7 +81,7 @@ export default function Intro(props) {
 					</li>
 					<li className="line2"></li>
 				</ul>
-				<div className="arrow-down">
+				{/* <div className="arrow-down">
 					<Link
 						activeClass="active"
 						to="skills"
@@ -101,7 +101,7 @@ export default function Intro(props) {
 							}}
 						/>
 					</Link>
-				</div>
+				</div> */}
 				{/* <div className="social-group">
 					<div className="line1"></div>
 					<h3>hey</h3>
