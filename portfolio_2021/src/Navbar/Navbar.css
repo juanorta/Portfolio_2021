@@ -14,10 +14,11 @@
 }
 
 .app-header {
+	/* color: blue; */
 	height: 60px;
 	position: relative;
 	z-index: 10;
-	background-color: transparent;
+	background-color: white;
 	width: 1275px;
 }
 
@@ -40,9 +41,12 @@
 }
 
 .app-branding li a {
+	background-color: transparent;
 	text-decoration: none;
 	line-height: 60px;
-	margin-left: -5.5rem;
+	position: fixed;
+
+	/* margin-left: -20%; */
 }
 
 .app-options {
@@ -139,13 +143,21 @@
 
 	.app-branding {
 		/* margin-left: -2%; */
+		background-color: transparent;
 		margin: 0 auto;
-		margin-left: 2rem;
+		margin-left: -5.5rem;
 	}
 }
 
 @media (min-width: 768px) {
 	.menu-icon {
 		display: none;
+	}
+}
+
+@media screen and (min-width: 1921px) {
+	.app-header {
+		background-color: transparent;
+		width: 1575px;
 	}
 }

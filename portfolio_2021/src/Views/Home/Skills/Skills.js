@@ -13,7 +13,7 @@ export default function Skills(props) {
 			}}
 		>
 			<div className="spacer"></div>
-			<Grid container lg={9} md={9} className="skills-title">
+			<Grid container xl={8} lg={8} md={7} className="skills-title">
 				<h1>
 					{' '}
 					<h2
@@ -29,39 +29,27 @@ export default function Skills(props) {
 					Skills
 				</h1>
 			</Grid>
-			<Grid container lg={9} md={9} className="skills-description">
-				<Grid item lg={5}>
+			<Grid container xl={8} lg={8} md={7} className="skills-description">
+				{/* <Grid item lg={9}>
 					<p>
 						Through my studies, I've gained a solid understanding of
 						computer science and web development concepts, and have
 						dedicated a lot of my free time to apply these concepts
 						to real-world scenarios and applications.
 					</p>
-				</Grid>
+				</Grid> */}
 			</Grid>
 			<Grid
 				container
-				lg={9}
-				md={9}
+				xl={8}
+				lg={8}
+				md={7}
 				className="skills-content"
 				style={{ overflowY: 'hidden' }}
 			>
-				<Grid item lg={4} xs={10} className="columns languages">
+				<Grid item lg={3} xs={10} className="columns languages">
 					{' '}
-					<h2>
-						{' '}
-						<h2
-							style={{
-								display: 'inline',
-								color: '#ff5757',
-								fontSize: '1.75rem',
-							}}
-						>
-							{' '}
-							|{' '}
-						</h2>
-						Languages
-					</h2>
+					<h2>Programming Languages</h2>
 					<ul>
 						<li>C</li>
 						<li>C++</li>
@@ -71,22 +59,9 @@ export default function Skills(props) {
 						<li>SQL</li>
 					</ul>
 				</Grid>
-				<Grid item lg={4} xs={12} className="columns libraries">
+				<Grid item lg={3} xs={12} className="columns libraries">
 					{' '}
-					<h2>
-						{' '}
-						<h2
-							style={{
-								display: 'inline',
-								color: '#ff5757',
-								fontSize: '1.75rem',
-							}}
-						>
-							{' '}
-							|{' '}
-						</h2>
-						Libraries & Frameworks
-					</h2>
+					<h2>Libraries & Frameworks</h2>
 					<ul className="libraries-ul">
 						<li>Spring Boot</li>
 						<li>React</li>
@@ -97,27 +72,14 @@ export default function Skills(props) {
 						<li>REST</li>
 					</ul>
 				</Grid>
-				<Grid item lg={4} xs={12} className="columns tools">
+				<Grid item lg={3} xs={12} className="columns tools">
 					{' '}
-					<h2>
-						{' '}
-						<h2
-							style={{
-								display: 'inline',
-								color: '#ff5757',
-								fontSize: '1.75rem',
-							}}
-						>
-							{' '}
-							|{' '}
-						</h2>
-						Tools & Microservices
-					</h2>
+					<h2>Tools & Microservices</h2>
 					<ul className="tools-ul">
 						<li>Amazon Web Services</li>
 						<li>Google Cloud</li>
 						<li>Digital Ocean</li>
-						{/* <li>Docker</li> */}
+						<li>Docker</li>
 						<li>Git</li>
 						<li>Postman</li>
 					</ul>

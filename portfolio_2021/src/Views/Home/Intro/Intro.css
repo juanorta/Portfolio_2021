@@ -10,7 +10,7 @@
 .greeting {
 	overflow-y: hidden;
 	background-color: transparent;
-	margin-top: 13%;
+	margin-top: 6rem;
 	opacity: 1;
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
@@ -144,5 +144,34 @@
 
 	.line2 {
 		width: 2rem;
+	}
+}
+/* 
+@media only screen and (min-width: 768px) {
+	.greeting {
+		background-color: red;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.greeting {
+		background-color: green;
+	}
+} */
+/* 
+macbook air 13 inch */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+	.greeting {
+		background-color: transparent;
+		margin-top: 3rem;
+	}
+}
+
+/* big monitor */
+@media screen and (min-width: 1921px) {
+	.greeting {
+		background-color: transparent;
+		margin-top: 9%;
+		/* margin-top: 3rem; */
 	}
 }

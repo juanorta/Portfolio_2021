@@ -1,6 +1,6 @@
 .contact-main-container {
-	background-color: white;
-	height: 100vh;
+	background-color: transparent;
+	height: 115vh;
 	justify-content: center;
 }
 
@@ -9,6 +9,12 @@
 	margin: 0 auto;
 	/* height: 15rem;
 	width: 10rem; */
+}
+
+.spacer-contact {
+	background-color: transparent;
+	width: 100%;
+	height: 8rem;
 }
 
 .contact-title h1 {

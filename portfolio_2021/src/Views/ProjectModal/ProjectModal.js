@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
 		color: '#ff5757',
 	},
 	viewCode: {
-		marginLeft: '1rem',
+		marginRight: '1rem',
 		color: '#ff5757',
 	},
 }));
@@ -316,6 +316,14 @@ export default function ProjectModal(props) {
 												View Code
 											</Button>
 										</a>
+										<a>
+											<Button
+												className={classes.viewCode}
+												onClick={handleClose}
+											>
+												Close
+											</Button>
+										</a>
 									</div>
 								</div>
 							) : null}
@@ -395,6 +403,14 @@ export default function ProjectModal(props) {
 													}}
 												/>{' '}
 												View Code
+											</Button>
+										</a>
+										<a>
+											<Button
+												className={classes.viewCode}
+												onClick={handleClose}
+											>
+												Close
 											</Button>
 										</a>
 									</div>

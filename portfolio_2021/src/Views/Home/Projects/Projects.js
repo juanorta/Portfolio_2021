@@ -8,11 +8,15 @@ import { NavLink } from 'react-router-dom';
 import cat from '../../../gifs/cat.png';
 import GifPlayer from 'react-gif-player';
 import covidPreview from '../../../images/covid-preview.png';
+import covidPreview2 from '../../../images/5-3-covid-ss.png';
 import petsPreview from '../../../images/pets-preview.png';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import Modal from '@material-ui/core/Modal';
 import ProjectModal from '../../ProjectModal/ProjectModal';
+import Chip from '@material-ui/core/Chip';
+import CallMadeIcon from '@material-ui/icons/CallMade';
+import CodeIcon from '@material-ui/icons/Code';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -31,20 +35,16 @@ const useStyles = makeStyles((theme) => ({
 		// height: '4rem',
 		// width: '4rem',
 	},
-	eyeCon: {
-		marginRight: '0.5rem',
+	chip: {
+		align: 'right',
+		borderRadius: '5px',
+		margin: '0.25rem',
 	},
-
-	workout: {
-		height: '8rem',
-		width: '8rem',
-		marginTop: '10%',
-		marginLeft: '-10%',
+	button: {
+		marginLeft: '0.25rem',
+		color: '#ff5757',
+		fontFamily: 'Open Sans',
 	},
-	AddIcon: {
-		fontSize: '40px',
-	},
-
 	label: {
 		textTransform: 'capitalize',
 	},
@@ -93,7 +93,7 @@ export default function Projects(props) {
 	return (
 		<div className="projects-main-container" id="projects">
 			<div className="spacer"></div>
-			<Grid container lg={9} md={9} className="skills-title">
+			<Grid container xl={8} lg={8} md={7} className="skills-title">
 				<h1>
 					{' '}
 					<h2
@@ -109,19 +109,162 @@ export default function Projects(props) {
 					Projects
 				</h1>
 			</Grid>
-			<div className="spacer"></div>
-			<Grid
+			{/* <div className="spacer"></div> */}
+			{/* <Grid
 				container
-				xl={9}
-				lg={10}
-				md={11}
+				xl={7}
+				lg={8}
+				md={7}
 				className="projects-content"
 				style={{ overflowY: 'hidden' }}
 				// spacing={0}
 			>
-				<Grid item lg={4} xs={12} className="project-columns first">
-					<div className="project">
-						<div className="gif-container">
+				<Grid item lg={12} xs={12} className="project-columns first"> */}
+
+			<div className="projects-content">
+				<div className="project" style={{ overflowY: 'hidden' }}>
+					<div className="picture">
+						<img
+							className="project-picture"
+							src={covidPreview2}
+							// style={{ width: '35rem' }}
+						/>
+					</div>
+					<div className="info">
+						<div className="title">
+							<h3>US COVID-19 Testing Locations</h3>
+						</div>
+						<div className="home-about">
+							<p>
+								View COVID-19 testing locations accross the
+								United States. Given a user's location (or a
+								city name) and a radius, the user will receive
+								results for all nearby testing locations sorted
+								by distance.
+							</p>
+						</div>
+
+						<div className="buttons">
+							<a
+								href="https://github.com/juanorta/COVID-19_Testing_Locations"
+								target="_blank"
+							>
+								<Button className={classes.button}>
+									<CodeIcon
+										style={{
+											marginRight: '0.5rem',
+										}}
+									/>{' '}
+									Code
+								</Button>
+							</a>
+							<a
+								href="https://uscovidtestinglocations.com/"
+								target="_blank"
+							>
+								<Button className={classes.button}>
+									{' '}
+									<CallMadeIcon
+										style={{
+											marginRight: '0.5rem',
+										}}
+									/>{' '}
+									Live
+								</Button>
+							</a>
+							<Button
+								className={classes.button}
+								onClick={covidHandler}
+							>
+								{' '}
+								<VisibilityIcon
+									style={{ marginRight: '0.5rem' }}
+								/>
+								See More
+							</Button>
+						</div>
+					</div>
+				</div>
+				<div
+					style={{
+						height: '6rem',
+					}}
+				></div>
+
+				<div className="project-2" style={{ overflowY: 'hidden' }}>
+					<div className="info-2">
+						<div className="title mpf">
+							<h3>My Pet Family</h3>
+						</div>
+						<div className="home-about mpf">
+							<p>
+								A pet manager to help keep track of all your pet
+								needs. Add multiple pets and their respective
+								appointments, food, weights, preventatives,
+								medications, and veterinarians.
+							</p>
+						</div>
+
+						<div className="buttons mpf">
+							<a
+								href="https://github.com/juanorta/My_Pets"
+								target="_blank"
+							>
+								<Button className={classes.button}>
+									<CodeIcon
+										style={{
+											marginRight: '0.5rem',
+										}}
+									/>{' '}
+									Code
+								</Button>
+							</a>
+
+							<Button className={classes.button}>
+								{' '}
+								<CallMadeIcon
+									style={{
+										marginRight: '0.5rem',
+									}}
+								/>{' '}
+								Live
+							</Button>
+							<Button
+								className={classes.button}
+								onClick={petHandler}
+							>
+								{' '}
+								<VisibilityIcon
+									style={{ marginRight: '0.5rem' }}
+								/>
+								See More
+							</Button>
+						</div>
+					</div>
+					<div className="picture">
+						<img src={petsPreview} className="project-picture-2" />
+					</div>
+				</div>
+			</div>
+
+			{/* </Grid>
+			</Grid> */}
+
+			{viewProjectClicked ? (
+				<ProjectModal
+					SetOpenModalToFalse={SetOpenModalToFalse}
+					openModal={openModal}
+					isCovid={isCovid}
+					isPet={isPet}
+					isExercise={isExercise}
+				/>
+			) : null}
+		</div>
+	);
+}
+
+{
+	/* <div className="gif-container">
 							<img
 								className="picture"
 								src={covidPreview}
@@ -165,10 +308,10 @@ export default function Projects(props) {
 									</Button>
 								</NavLink>
 							</div>
-						</div>
-					</div>
-				</Grid>
-				<Grid item lg={4} xs={12} className="project-columns second">
+						</div> */
+}
+{
+	/* <Grid item lg={4} xs={12} className="project-columns second">
 					<div className="project">
 						<div className="gif-container">
 							<img
@@ -216,16 +359,14 @@ export default function Projects(props) {
 							</div>
 						</div>
 					</div>
-				</Grid>
-				<Grid item lg={4} xs={12} className="project-columns third">
+				</Grid> */
+}
+{
+	/* <Grid item lg={4} xs={12} className="project-columns third">
 					<div className="project">
 						<div className="gif-container">
 							<FitnessCenterIcon className={classes.workout} />
-							{/* <img
-								className="picture"
-								src={petsPreview}
-								style={{ width: '90%' }}
-							/> */}
+						
 						</div>
 						<div className="info-section">
 							<div className="title-description">
@@ -262,18 +403,5 @@ export default function Projects(props) {
 							</div>
 						</div>
 					</div>
-				</Grid>
-			</Grid>
-
-			{viewProjectClicked ? (
-				<ProjectModal
-					SetOpenModalToFalse={SetOpenModalToFalse}
-					openModal={openModal}
-					isCovid={isCovid}
-					isPet={isPet}
-					isExercise={isExercise}
-				/>
-			) : null}
-		</div>
-	);
+				</Grid> */
 }

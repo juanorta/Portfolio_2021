@@ -1,6 +1,6 @@
 .projects-main-container {
 	background-color: transparent;
-	height: 100vh;
+	height: 120vh;
 	font-family: 'Open Sans';
 }
 
@@ -19,9 +19,11 @@
 
 .projects-content {
 	background-color: transparent;
-	height: 60vh;
+	height: 40vh;
 	margin: 0 auto;
-	justify-content: center;
+	width: 69%;
+	/* justify-content: center; */
+	/* justify-content: center; */
 }
 
 /* .first:hover {
@@ -35,16 +37,111 @@
 }
 
 .project {
+	margin: 0 auto;
 	overflow-y: hidden;
 	background-color: transparent;
-	height: 35rem;
+	height: 20rem;
 	position: relative;
-	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.67);
-	width: 97%;
+	/* box-shadow: 0 1px 6px rgba(0, 0, 0, 0.67); */
+	width: 68rem;
 	margin-left: 1%;
 	overflow: auto;
 	margin-top: 1rem;
 	border-radius: 5px;
+}
+
+.project-2 {
+	overflow-y: hidden;
+	background-color: transparent;
+	height: 20rem;
+	position: relative;
+	/* box-shadow: 0 1px 6px rgba(0, 0, 0, 0.67); */
+	width: 68rem;
+	margin-left: 1%;
+	overflow: auto;
+	margin-top: 1rem;
+	/* border-radius: 5px; */
+}
+
+.picture {
+	background-color: transparent;
+	width: 60%;
+	height: 100%;
+	float: left;
+	justify-content: center;
+}
+
+.project-picture {
+	width: 38.5rem;
+	margin-top: 0.15rem;
+
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.67);
+}
+
+.project-picture-2 {
+	width: 37rem;
+	margin-top: 0.25rem;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.67);
+}
+
+/* .project-picture {
+	/* margin-top: 1%; */
+
+.info {
+	background-color: transparent;
+	width: 40%;
+	height: 100%;
+	float: right;
+	overflow-y: hidden;
+}
+
+.title {
+	text-align: right;
+	padding-right: 1rem;
+}
+
+.title.mpf {
+	text-align: left;
+	padding-left: 1rem;
+}
+
+.home-about {
+	background-color: transparent;
+	text-align: right;
+	height: 30%;
+	width: 100%;
+	margin-top: 3rem;
+}
+
+.home-about.mpf {
+	text-align: left;
+}
+
+.home-about p {
+	padding: 0.5rem;
+}
+
+.tags {
+	background-color: aqua;
+}
+
+.buttons {
+	background-color: transparent;
+	height: 15%;
+	margin-top: 5%;
+	text-align: right;
+	padding-right: 1rem;
+}
+
+.buttons.mpf {
+	text-align: left;
+}
+
+.info-2 {
+	background-color: transparent;
+	width: 40%;
+	height: 100%;
+	float: left;
 }
 
 .gif-container {
@@ -166,6 +263,125 @@
 		justify-content: center;
 	}
 }
+
+@media screen and (min-device-width: 1441px) and (max-device-width: 1921px) {
+	.projects-content {
+		background-color: transparent;
+		width: 69%;
+		/* width: 60%; */
+		/* height: ; */
+	}
+}
+
+/* @media screen and (max-device-width: 1920px) {
+	.projects-content {
+		background-color: green;
+		width: 60%;
+		/* width: 60%; */
+/* height: ; */
+
+/* @media screen and (max-device-width: 1920px) {
+	.projects-content {
+		background-color: green;
+		width: 60%;
+		/* width: 60%; */
+/* height: ; */
+
+/* @media screen and (min-width: 1440px) {
+	.projects-content {
+		width: 69%;
+	}
+} */
+
+/* @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+	.projects-content {
+		width: 60%;
+	}
+} */
+/* 
+@media screen and (max-device-width: 1440) {
+	.projects-content {
+		background-color: red;
+		width: 69%;
+	}
+} */
+/* 
+@media screen and (min-device-width: 1920px) and (max-device-width: 2000px) {
+	.projects-content {
+		background-color: green;
+		width: 50%;
+	
+	}
+
+	.project {
+		width: 68rem;
+		height: 20rem;
+	}
+
+	.project-2 {
+		width: 68rem;
+		height: 20rem;
+	}
+
+	.project-picture {
+		width: 39rem;
+	}
+
+	.project-picture-2 {
+		width: 38rem;
+	}
+} */
+
+@media screen and (min-width: 1670px) {
+	.projects-content {
+		width: 69%;
+	}
+
+	.project {
+		width: 75rem;
+		height: 25rem;
+	}
+
+	.project-2 {
+		width: 75rem;
+		height: 25rem;
+	}
+
+	.project-picture {
+		/* width: 38rem; */
+		width: 97%;
+	}
+
+	.project-picture-2 {
+		/* width: 37rem; */
+		width: 98%;
+	}
+}
+
+@media screen and (min-width: 1921px) {
+	.projects-content {
+		width: 69%;
+	}
+
+	.project {
+		width: 100rem;
+		height: 30rem;
+	}
+
+	.project-2 {
+		width: 100rem;
+		height: 30rem;
+	}
+
+	.project-picture {
+		width: 57rem;
+	}
+
+	.project-picture-2 {
+		width: 56rem;
+	}
+}
+
 /* .project-columns {
 	background-color: red;
 } */

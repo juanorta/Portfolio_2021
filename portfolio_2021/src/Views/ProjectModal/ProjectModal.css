@@ -40,11 +40,15 @@ p {
 
 .project-buttons {
 	background-color: transparent;
-	width: 75%;
+	width: 95%;
 	margin: 0 auto;
 }
 
 .project-buttons a {
+	text-decoration: none;
+}
+
+.projects-main-container a {
 	text-decoration: none;
 }
 

@@ -8,6 +8,8 @@ import ReactTooltip from 'react-tooltip';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
+// import resume from '../../../../src/resume/Juan_Orta_Software_Developer_Resume.pdf';
+
 const useStyles = makeStyles((theme) => ({
 	linkedIn: {
 		color: 'black',
@@ -75,7 +77,10 @@ export default function Intro(props) {
 						</a>
 					</li>
 					<li className="link" data-tip data-for="resume">
-						<a>
+						<a
+						// href="./resume/Juan_Orta_Software_Developer_Resume.pdf"
+						// target="_blank"
+						>
 							<FileCopyIcon className={classes.resume} />
 						</a>
 					</li>

@@ -169,7 +169,7 @@ export default function Navbar(props) {
 												to="contact"
 												spy={true}
 												smooth={true}
-												offset={0}
+												offset={70}
 												duration={500}
 											>
 												<a>Contact Me</a>
