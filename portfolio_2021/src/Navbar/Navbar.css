@@ -19,7 +19,7 @@
 	position: relative;
 	z-index: 10;
 	background-color: white;
-	width: 1275px;
+	width: 90%;
 }
 
 .app-title {
@@ -156,8 +156,8 @@
 }
 
 @media screen and (min-width: 1921px) {
-	.app-header {
+	/* .app-header {
 		background-color: transparent;
 		width: 1575px;
-	}
+	} */
 }

@@ -1,6 +1,6 @@
 .projects-main-container {
 	background-color: transparent;
-	height: 120vh;
+	height: 135vh;
 	font-family: 'Open Sans';
 }
 
@@ -40,7 +40,7 @@
 	margin: 0 auto;
 	overflow-y: hidden;
 	background-color: transparent;
-	height: 20rem;
+	height: 23rem;
 	position: relative;
 	/* box-shadow: 0 1px 6px rgba(0, 0, 0, 0.67); */
 	width: 68rem;
@@ -53,7 +53,7 @@
 .project-2 {
 	overflow-y: hidden;
 	background-color: transparent;
-	height: 20rem;
+	height: 23rem;
 	position: relative;
 	/* box-shadow: 0 1px 6px rgba(0, 0, 0, 0.67); */
 	width: 68rem;
@@ -66,22 +66,22 @@
 .picture {
 	background-color: transparent;
 	width: 60%;
-	height: 100%;
+	height: 110%;
 	float: left;
 	justify-content: center;
 }
 
 .project-picture {
 	width: 38.5rem;
-	margin-top: 0.15rem;
+	margin-top: 1rem;
 
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.67);
+	box-shadow: 0 1px 14px rgba(0, 0, 0, 0.67);
 }
 
 .project-picture-2 {
 	width: 37rem;
-	margin-top: 0.25rem;
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.67);
+	margin-top: 1rem;
+	box-shadow: 0 1px 14px rgba(0, 0, 0, 0.67);
 }
 
 /* .project-picture {
@@ -349,28 +349,31 @@
 
 	.project-picture {
 		/* width: 38rem; */
-		width: 97%;
+		width: 96%;
 	}
 
 	.project-picture-2 {
 		/* width: 37rem; */
-		width: 98%;
+		width: 96%;
 	}
 }
 
 @media screen and (min-width: 1921px) {
+	.projects-main-container {
+		height: 110vh;
+	}
 	.projects-content {
 		width: 69%;
 	}
 
 	.project {
 		width: 100rem;
-		height: 30rem;
+		height: 31rem;
 	}
 
 	.project-2 {
 		width: 100rem;
-		height: 30rem;
+		height: 32rem;
 	}
 
 	.project-picture {

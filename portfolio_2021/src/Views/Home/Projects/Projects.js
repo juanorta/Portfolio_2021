@@ -10,6 +10,7 @@ import GifPlayer from 'react-gif-player';
 import covidPreview from '../../../images/covid-preview.png';
 import covidPreview2 from '../../../images/5-3-covid-ss.png';
 import petsPreview from '../../../images/pets-preview.png';
+import petsPreview2 from '../../../images/mpf.png';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import Modal from '@material-ui/core/Modal';
@@ -242,7 +243,7 @@ export default function Projects(props) {
 						</div>
 					</div>
 					<div className="picture">
-						<img src={petsPreview} className="project-picture-2" />
+						<img src={petsPreview2} className="project-picture-2" />
 					</div>
 				</div>
 			</div>
