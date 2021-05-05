@@ -176,7 +176,11 @@ export default function Navbar(props) {
 											</Link>
 										</li>
 										<li>
-											<a href={resume} target="_blank">
+											<a
+												className="navlink"
+												href={resume}
+												target="_blank"
+											>
 												Resume
 											</a>
 										</li>
