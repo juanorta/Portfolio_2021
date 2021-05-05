@@ -171,6 +171,7 @@ export default function Projects(props) {
 							<NavLink to="/covidProject">
 								<Button
 									className={classes.button}
+
 									// onClick={covidHandler}
 								>
 									{' '}
@@ -230,7 +231,7 @@ export default function Projects(props) {
 							<NavLink to="/myPetFamily">
 								<Button
 									className={classes.button}
-									onClick={petHandler}
+									// onClick={petHandler}
 								>
 									{' '}
 									<VisibilityIcon

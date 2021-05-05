@@ -1,3 +1,4 @@
+import { React, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './Navbar/Navbar';
@@ -13,9 +14,21 @@ function App() {
 			{/* <Home /> */}
 			<Router>
 				<Navbar />
-				<Route exact path="/" component={Home}></Route>
-				<Route exact path="/covidProject" component={CovidProject} />
-				<Route exact path="/myPetFamily" component={PetProject} />
+				<Route
+					exact
+					path="/"
+					render={(props) => <Home {...props} />}
+				></Route>
+				<Route
+					exact
+					path="/covidProject"
+					render={(props) => <CovidProject {...props} />}
+				/>
+				<Route
+					exact
+					path="/myPetFamily"
+					render={(props) => <PetProject {...props} />}
+				/>
 				<Route exact path="/liftLog" component={ExerciseProject} />
 			</Router>
 		</div>

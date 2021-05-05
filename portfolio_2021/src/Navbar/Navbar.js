@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useEffect, useState } from 'react';
 import './Navbar.css';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import BackToTop from './BackToTop';
 import {
 	Container,
@@ -82,7 +82,6 @@ export default function Navbar(props) {
 	const [anchorEl, setAnchorEl] = useState(null);
 	const [open, setOpen] = useState(false);
 	const [isDarkMode, setIsDarkMode] = useState(() => false);
-
 	let menuClass = 'not-mobile';
 
 	return (
@@ -178,6 +177,7 @@ export default function Navbar(props) {
 										<li>
 											<a>Resume</a>
 										</li>
+
 										<li>
 											<a
 												style={{

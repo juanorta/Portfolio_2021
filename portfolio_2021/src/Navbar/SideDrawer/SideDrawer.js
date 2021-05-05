@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react';
 import './SideDrawer.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -98,6 +98,8 @@ export default function SideDrawerNotLoggedIn(props) {
 	const [contactStyle, setContactStyle] = useState(classes.listItemStyle);
 	const [listItemStyle, setListItemStyle] = useState(classes.listItemStyle);
 	const [isDarkMode, setIsDarkMode] = useState(() => false);
+	let location = useLocation().pathname;
+	console.log('current location: ' + location);
 
 	//functions to handle drawer open/close
 	const handleDrawerOpen = () => {
@@ -146,112 +148,137 @@ export default function SideDrawerNotLoggedIn(props) {
 
 				<List>
 					<div className="drawer-list-items">
-						<Link
-							activeClass="active"
-							to="skills"
-							spy={true}
-							smooth={true}
-							offset={0}
-							duration={500}
-							onSetActive={() => {
-								console.log('heyt');
-							}}
-							// onSetActive={() => {
-							// 	console.log('active');
-							// 	// setSkillsStyle(classes.contentsActive);
-							// }}
-							// onSetInactive={() => {
-							// 	setSkillsStyle(classes.listItemStyle);
-							// }}
-						>
-							<ListItem
-								className={skillsStyle}
-								button
-								onClick={handleDrawerClose}
-								style={{
-									color: 'white',
-									// backgroundColor: '#ff5757',
-									height: '4rem',
-								}}
-							>
-								<ListItemIcon
-									style={{
-										color: 'white',
-										height: '4rem',
+						{location == '/' ? (
+							<div>
+								<Link
+									activeClass="active"
+									to="skills"
+									spy={true}
+									smooth={true}
+									offset={0}
+									duration={500}
+									onSetActive={() => {
+										console.log('heyt');
 									}}
-								></ListItemIcon>
-								<p>Skills</p>
-							</ListItem>
-						</Link>
+									// onSetActive={() => {
+									// 	console.log('active');
+									// 	// setSkillsStyle(classes.contentsActive);
+									// }}
+									// onSetInactive={() => {
+									// 	setSkillsStyle(classes.listItemStyle);
+									// }}
+								>
+									<ListItem
+										className={skillsStyle}
+										button
+										onClick={handleDrawerClose}
+										style={{
+											color: 'white',
+											// backgroundColor: '#ff5757',
+											height: '4rem',
+										}}
+									>
+										<ListItemIcon
+											style={{
+												color: 'white',
+												height: '4rem',
+												marginLeft: '-0.5rem',
+											}}
+										></ListItemIcon>
+										<p>Skills</p>
+									</ListItem>
+								</Link>
 
-						<Link
-							activeClass="active"
-							to="projects"
-							spy={true}
-							smooth={true}
-							offset={0}
-							duration={500}
-						>
-							<ListItem
-								className={projectsStyle}
-								button
-								onClick={handleDrawerClose}
-								style={{
-									color: 'white',
-									height: '4rem',
-								}}
-							>
-								<ListItemIcon
+								<Link
+									activeClass="active"
+									to="projects"
+									spy={true}
+									smooth={true}
+									offset={0}
+									duration={500}
+								>
+									<ListItem
+										className={projectsStyle}
+										button
+										onClick={handleDrawerClose}
+										style={{
+											color: 'white',
+											height: '4rem',
+										}}
+									>
+										<ListItemIcon
+											style={{
+												color: 'white',
+												height: '4rem',
+											}}
+										></ListItemIcon>
+										Projects
+									</ListItem>
+								</Link>
+								<Link
+									activeClass="active"
+									to="contact"
+									spy={true}
+									smooth={true}
+									offset={0}
+									duration={500}
+								>
+									<ListItem
+										className={contactStyle}
+										button
+										onClick={handleDrawerClose}
+										style={{
+											color: 'white',
+											height: '4rem',
+										}}
+									>
+										<ListItemIcon
+											style={{
+												color: 'white',
+												height: '4rem',
+											}}
+										></ListItemIcon>
+										Contact Me
+									</ListItem>
+								</Link>
+								<ListItem
+									button
+									onClick={handleDrawerClose}
 									style={{
 										color: 'white',
 										height: '4rem',
 									}}
-								></ListItemIcon>
-								Projects
-							</ListItem>
-						</Link>
-						<Link
-							activeClass="active"
-							to="contact"
-							spy={true}
-							smooth={true}
-							offset={0}
-							duration={500}
-						>
-							<ListItem
-								className={contactStyle}
-								button
-								onClick={handleDrawerClose}
-								style={{
-									color: 'white',
-									height: '4rem',
-								}}
-							>
-								<ListItemIcon
+								>
+									<ListItemIcon
+										style={{
+											color: 'white',
+											height: '4rem',
+										}}
+									></ListItemIcon>
+									Resume
+								</ListItem>
+							</div>
+						) : (
+							<NavLink to="/" className="navlink">
+								<ListItem
+									button
+									onClick={handleDrawerClose}
 									style={{
 										color: 'white',
 										height: '4rem',
 									}}
-								></ListItemIcon>
-								Contact Me
-							</ListItem>
-						</Link>
-						<ListItem
-							button
-							onClick={handleDrawerClose}
-							style={{
-								color: 'white',
-								height: '4rem',
-							}}
-						>
-							<ListItemIcon
-								style={{
-									color: 'white',
-									height: '4rem',
-								}}
-							></ListItemIcon>
-							Resume
-						</ListItem>
+								>
+									<ListItemIcon
+										style={{
+											color: 'white',
+											height: '4rem',
+										}}
+									></ListItemIcon>
+									Home
+								</ListItem>
+							</NavLink>
+						)}
+
 						<ListItem
 							button
 							// onClick={handleDrawerClose}
