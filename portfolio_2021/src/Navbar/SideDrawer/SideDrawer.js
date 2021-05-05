@@ -22,6 +22,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import DarkModeToggle from 'react-dark-mode-toggle';
+import resume from '../../resume/resume-portfolio.pdf';
 
 const drawerWidth = 300;
 
@@ -241,22 +242,6 @@ export default function SideDrawerNotLoggedIn(props) {
 										Contact Me
 									</ListItem>
 								</Link>
-								<ListItem
-									button
-									onClick={handleDrawerClose}
-									style={{
-										color: 'white',
-										height: '4rem',
-									}}
-								>
-									<ListItemIcon
-										style={{
-											color: 'white',
-											height: '4rem',
-										}}
-									></ListItemIcon>
-									Resume
-								</ListItem>
 							</div>
 						) : (
 							<NavLink to="/" className="navlink">
@@ -278,6 +263,24 @@ export default function SideDrawerNotLoggedIn(props) {
 								</ListItem>
 							</NavLink>
 						)}
+						<a href={resume} target="_blank" className="navlink">
+							<ListItem
+								button
+								onClick={handleDrawerClose}
+								style={{
+									color: 'white',
+									height: '4rem',
+								}}
+							>
+								<ListItemIcon
+									style={{
+										color: 'white',
+										height: '4rem',
+									}}
+								></ListItemIcon>
+								Resume
+							</ListItem>
+						</a>
 
 						<ListItem
 							button

@@ -27,6 +27,7 @@ import SideDrawer from './SideDrawer/SideDrawer';
 import JuanLogo from '../Logo/portfoliologo.svg';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import DarkModeToggle from 'react-dark-mode-toggle';
+import resume from '../resume/resume-portfolio.pdf';
 
 const drawerWidth = 300;
 
@@ -175,7 +176,9 @@ export default function Navbar(props) {
 											</Link>
 										</li>
 										<li>
-											<a>Resume</a>
+											<a href={resume} target="_blank">
+												Resume
+											</a>
 										</li>
 
 										<li>
