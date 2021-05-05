@@ -19,7 +19,7 @@
 	position: relative;
 	z-index: 10;
 	background-color: white;
-	width: 90%;
+	width: 100%;
 }
 
 .app-title {
@@ -141,11 +141,26 @@
 		display: none;
 	}
 
+	.app-header-wrapper {
+		/* background-color: rebeccapurple; */
+	}
+
+	.app-header {
+		/* background-color: transparent; */
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
 	.app-branding {
 		/* margin-left: -2%; */
-		background-color: transparent;
-		margin: 0 auto;
-		margin-left: -5.5rem;
+		/* margin: 0 auto; */
+		padding: 0;
+
+		/* margin-left: -6.5rem; */
 	}
 }
 

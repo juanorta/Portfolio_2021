@@ -34,6 +34,12 @@
 .form {
 }
 
+@media (max-width: 600px) {
+	.spacer-contact {
+		height: 5rem;
+	}
+}
+
 @media screen and (min-width: 1670px) {
 	.contact-main-container {
 		height: 100vh;

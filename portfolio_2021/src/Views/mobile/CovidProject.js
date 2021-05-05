@@ -40,10 +40,15 @@ const useStyles = makeStyles((theme) => ({
 		// backgroundColor: 'red',
 	},
 	viewLive: {
-		marginRight: '1rem',
+		// marginRight: '1rem',
 		color: '#ff5757',
 	},
 	viewCode: {
+		marginLeft: '1rem',
+		color: '#ff5757',
+	},
+
+	goBack: {
 		marginLeft: '1rem',
 		color: '#ff5757',
 	},
@@ -194,6 +199,7 @@ export default function CovidProject(props) {
 									View Code
 								</Button>
 							</a>
+							{/* <Button className={classes.goBack}>Home</Button> */}
 						</div>
 					</div>
 				</div>

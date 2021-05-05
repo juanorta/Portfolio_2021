@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	button: {
 		marginLeft: '0.25rem',
+		marginRight: '0.25rem',
 		color: '#ff5757',
 		fontFamily: 'Open Sans',
 	},
@@ -167,16 +168,18 @@ export default function Projects(props) {
 									Live
 								</Button>
 							</a>
-							<Button
-								className={classes.button}
-								onClick={covidHandler}
-							>
-								{' '}
-								<VisibilityIcon
-									style={{ marginRight: '0.5rem' }}
-								/>
-								See More
-							</Button>
+							<NavLink to="/covidProject">
+								<Button
+									className={classes.button}
+									// onClick={covidHandler}
+								>
+									{' '}
+									<VisibilityIcon
+										style={{ marginRight: '0.5rem' }}
+									/>
+									See More
+								</Button>
+							</NavLink>
 						</div>
 					</div>
 				</div>
@@ -224,16 +227,18 @@ export default function Projects(props) {
 								/>{' '}
 								Live
 							</Button>
-							<Button
-								className={classes.button}
-								onClick={petHandler}
-							>
-								{' '}
-								<VisibilityIcon
-									style={{ marginRight: '0.5rem' }}
-								/>
-								See More
-							</Button>
+							<NavLink to="/myPetFamily">
+								<Button
+									className={classes.button}
+									onClick={petHandler}
+								>
+									{' '}
+									<VisibilityIcon
+										style={{ marginRight: '0.5rem' }}
+									/>
+									See More
+								</Button>
+							</NavLink>
 						</div>
 					</div>
 				</div>
