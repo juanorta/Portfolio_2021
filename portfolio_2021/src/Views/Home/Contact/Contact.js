@@ -6,6 +6,10 @@ import DarkModeToggle from 'react-dark-mode-toggle';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
+import emailjs from 'emailjs-com';
+import Alert from 'react-s-alert';
+import 'react-s-alert/dist/s-alert-default.css';
+import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -41,6 +45,31 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Contact(props) {
+	function sendEmail(e) {
+		e.preventDefault();
+		Alert.closeAll();
+
+		emailjs
+			.sendForm(
+				'service_7lvgwlb',
+				'template_2zg10ud',
+				e.target,
+				'user_CoRSUTJDMq4T954sjdrmm'
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+					Alert.success('Your message is sent!');
+				},
+				(error) => {
+					console.log(error.text);
+					Alert.error('Unable to send message');
+				}
+			);
+
+		e.target.reset();
+	}
+
 	const classes = useStyles();
 	return (
 		<div className="contact-main-container" id="contact">
@@ -62,18 +91,26 @@ export default function Contact(props) {
 				</h1>
 			</Grid>
 			<Grid container lg={4} md={4} sm={3} className="form-grid">
-				<form className={classes.root}>
+				<form className={classes.root} onSubmit={sendEmail}>
 					<TextField
 						// className={classes.TextField}
 						required
 						id="standard-required"
 						label="Name"
+						name="name"
 					/>
-					<TextField required id="standard-required" label="Email" />
+					<TextField
+						required
+						id="standard-required"
+						label="Your Email"
+						type="email"
+						name="email"
+					/>
 					<TextField
 						required
 						id="standard-required"
 						label="Subject"
+						name="subject"
 					/>
 					<TextField
 						id="outlined-multiline-static"
@@ -81,16 +118,24 @@ export default function Contact(props) {
 						multiline
 						rows={4}
 						variant="outlined"
+						name="message"
 					/>
 					<Button
 						type="submit"
 						variant="contained"
 						className={classes.button}
 					>
-						Submit
+						Send
 					</Button>
 				</form>
 			</Grid>
+			<Alert
+				stack={{ limit: 3 }}
+				timeout={3000}
+				position="top-right"
+				effect="slide"
+				offset={65}
+			/>
 		</div>
 	);
 }
