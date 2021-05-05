@@ -9,7 +9,7 @@
 
 .greeting {
 	overflow-y: hidden;
-	background-color: transparent;
+	background-color: white;
 	margin-top: 6rem;
 	opacity: 1;
 	animation-name: fadeInOpacity;
@@ -121,7 +121,7 @@
 	}
 
 	.greeting h1 {
-		font-size: 4rem;
+		font-size: 3.5rem;
 	}
 
 	.greeting h2 {
@@ -130,10 +130,13 @@
 
 	.social-group {
 		background-color: transparent;
-		width: 24rem;
-		margin-left: 2rem;
+		width: 97%;
+		justify-content: center;
+		/* width: 24rem; */
+		/* margin-left: 2rem; */
 	}
 	.social-group li {
+		/* margin: 0 auto; */
 		margin-right: 3rem;
 		margin-left: -1rem;
 	}

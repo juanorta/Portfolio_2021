@@ -74,7 +74,7 @@ export default function Contact(props) {
 	return (
 		<div className="contact-main-container" id="contact">
 			<div className="spacer-contact"></div>
-			<Grid container lg={3} md={3} className="contact-title">
+			<Grid container lg={3} md={8} className="contact-title">
 				<h1>
 					{/* {' '}
 					<h2
@@ -90,7 +90,7 @@ export default function Contact(props) {
 					Contact Me
 				</h1>
 			</Grid>
-			<Grid container lg={4} md={4} sm={3} className="form-grid">
+			<Grid container lg={4} md={8} sm={8} className="form-grid">
 				<form className={classes.root} onSubmit={sendEmail}>
 					<TextField
 						// className={classes.TextField}
