@@ -13,7 +13,14 @@ export default function Skills(props) {
 			}}
 		>
 			<div className="spacer"></div>
-			<Grid container xl={8} lg={8} md={7} className="skills-title">
+			<Grid
+				container
+				xl={8}
+				lg={8}
+				md={10}
+				sm={10}
+				className="skills-title"
+			>
 				<h1>
 					{' '}
 					<h2
@@ -43,7 +50,8 @@ export default function Skills(props) {
 				container
 				xl={8}
 				lg={8}
-				md={7}
+				md={10}
+				sm={10}
 				className="skills-content"
 				style={{ overflowY: 'hidden' }}
 			>

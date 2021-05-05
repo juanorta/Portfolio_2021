@@ -82,6 +82,7 @@
 	width: 37rem;
 	margin-top: 1rem;
 	box-shadow: 0 1px 14px rgba(0, 0, 0, 0.67);
+	/* margin-left: 10%; */
 }
 
 /* .project-picture {
@@ -97,7 +98,7 @@
 
 .title {
 	text-align: right;
-	padding-right: 1rem;
+	padding-right: 1.5rem;
 }
 
 .title.mpf {
@@ -111,10 +112,12 @@
 	height: 30%;
 	width: 100%;
 	margin-top: 3rem;
+	margin-left: -1rem;
 }
 
 .home-about.mpf {
 	text-align: left;
+	margin-left: 0rem;
 }
 
 .home-about p {
@@ -213,6 +216,52 @@
 .mobile-button-group {
 	display: none;
 }
+
+.project1-mobile {
+	display: none;
+	background-color: transparent;
+	height: 30rem;
+	width: 40rem;
+	margin: 0 auto;
+	margin-left: -10%;
+	/* margin-bottom: 4rem; */
+}
+
+.project1-mobile.covid {
+	margin-bottom: 10rem;
+}
+
+.picture-mobile {
+	margin-top: 1rem;
+	background-color: rebeccapurple;
+	height: 20rem;
+}
+
+.project-picture-mobile {
+	width: 40rem;
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.67);
+}
+
+.home-about-mobile {
+	margin-top: 2rem;
+	background-color: transparent;
+	height: 10rem;
+}
+
+.title-mobile {
+	text-align: left;
+}
+
+.about-mobile {
+	text-align: left;
+	margin-left: -0.4rem;
+}
+
+.buttons.mobile {
+	text-align: left;
+	margin-top: -0.25rem;
+	margin-left: -0.8rem;
+}
 /* 
 .third {
 	background-color: transparent;
@@ -225,6 +274,7 @@
 	}
 
 	.project {
+		display: none;
 		background-color: transparent;
 		height: 30rem;
 		position: relative;
@@ -235,6 +285,10 @@
 		margin-top: 1rem;
 		overflow-y: hidden;
 		z-index: 999;
+	}
+
+	.project-2 {
+		display: none;
 	}
 
 	.gif-container {
@@ -273,64 +327,96 @@
 	}
 }
 
-/* @media screen and (max-device-width: 1920px) {
-	.projects-content {
-		background-color: green;
-		width: 60%;
-		/* width: 60%; */
-/* height: ; */
-
-/* @media screen and (max-device-width: 1920px) {
-	.projects-content {
-		background-color: green;
-		width: 60%;
-		/* width: 60%; */
-/* height: ; */
-
-/* @media screen and (min-width: 1440px) {
-	.projects-content {
-		width: 69%;
+@media screen and (max-width: 960px) {
+	.project1-mobile {
+		display: block;
 	}
-} */
+	/* .projects-content {
+		width: 80%;
+	} */
 
-/* @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
-	.projects-content {
-		width: 60%;
-	}
-} */
-/* 
-@media screen and (max-device-width: 1440) {
-	.projects-content {
-		background-color: red;
-		width: 69%;
-	}
-} */
-/* 
-@media screen and (min-device-width: 1920px) and (max-device-width: 2000px) {
-	.projects-content {
-		background-color: green;
-		width: 50%;
-	
+	.projects-main-container {
+		height: 200vh;
+		/* background-color: rebeccapurple; */
 	}
 
 	.project {
-		width: 68rem;
-		height: 20rem;
+		display: none;
 	}
 
 	.project-2 {
-		width: 68rem;
-		height: 20rem;
+		display: none;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.projects-main-container {
+		background-color: transparent;
+	}
+
+	.projects-content {
+		background-color: transparent;
+		width: 98%;
 	}
 
 	.project-picture {
-		width: 39rem;
+		width: 70%;
 	}
 
 	.project-picture-2 {
-		width: 38rem;
+		width: 70%;
 	}
-} */
+
+	.project {
+		width: 60rem;
+		height: 25rem;
+	}
+
+	.project-2 {
+		width: 60rem;
+		margin-left: 8%;
+		height: 25rem;
+	}
+
+	.title {
+		/* margin-top: 3rem; */
+	}
+
+	.home-about {
+		background-color: transparent;
+		margin-top: -0.25rem;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.projects-main-container {
+		background-color: transparent;
+	}
+
+	.projects-content {
+		background-color: transparent;
+		width: 75%;
+	}
+
+	.project-picture {
+		width: 30rem;
+	}
+
+	.project-picture-2 {
+		width: 30rem;
+	}
+
+	.project {
+		width: 60rem;
+		height: 25rem;
+	}
+
+	.project-2 {
+		width: 60rem;
+		margin-left: 5%;
+		height: 25rem;
+	}
+}
 
 @media screen and (min-width: 1670px) {
 	.projects-content {
@@ -345,6 +431,15 @@
 	.project-2 {
 		width: 75rem;
 		height: 25rem;
+		margin-left: 1%;
+	}
+
+	.info {
+		width: 36%;
+	}
+
+	.info-2 {
+		width: 36%;
 	}
 
 	.project-picture {
@@ -354,14 +449,17 @@
 
 	.project-picture-2 {
 		/* width: 37rem; */
+		background-color: teal;
 		width: 96%;
+		margin-left: 10%;
 	}
 }
 
-@media screen and (min-width: 1921px) {
+@media screen and (min-width: 2040px) {
 	.projects-main-container {
 		height: 110vh;
 	}
+
 	.projects-content {
 		width: 69%;
 	}
@@ -374,6 +472,7 @@
 	.project-2 {
 		width: 100rem;
 		height: 32rem;
+		margin-left: 1.5%;
 	}
 
 	.project-picture {
@@ -382,6 +481,10 @@
 
 	.project-picture-2 {
 		width: 56rem;
+	}
+
+	.home-about {
+		margin-top: 3rem;
 	}
 }
 

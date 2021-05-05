@@ -94,7 +94,14 @@ export default function Projects(props) {
 	return (
 		<div className="projects-main-container" id="projects">
 			<div className="spacer"></div>
-			<Grid container xl={8} lg={8} md={7} className="skills-title">
+			<Grid
+				container
+				xl={8}
+				lg={8}
+				md={10}
+				sm={10}
+				className="skills-title"
+			>
 				<h1>
 					{' '}
 					<h2
@@ -110,19 +117,128 @@ export default function Projects(props) {
 					Projects
 				</h1>
 			</Grid>
-			{/* <div className="spacer"></div> */}
-			{/* <Grid
-				container
-				xl={7}
-				lg={8}
-				md={7}
-				className="projects-content"
-				style={{ overflowY: 'hidden' }}
-				// spacing={0}
-			>
-				<Grid item lg={12} xs={12} className="project-columns first"> */}
 
 			<div className="projects-content">
+				<div className="project1-mobile covid">
+					<div className="picture-mobile">
+						<img
+							className="project-picture-mobile"
+							src={covidPreview2}
+						/>
+					</div>
+					<div className="home-about-mobile">
+						<div className="title-mobile">
+							<h3>U.S. COVID-19 Testing Locations</h3>
+						</div>
+						<div className="about-mobile">
+							<p>
+								View COVID-19 testing locations accross the
+								United States. Given a user's location (or a
+								city name) and a radius, the user will receive
+								results for all nearby testing locations sorted
+								by distance.
+							</p>
+						</div>
+						<div className="buttons mobile">
+							<a
+								href="https://github.com/juanorta/COVID-19_Testing_Locations"
+								target="_blank"
+							>
+								<Button className={classes.button}>
+									<CodeIcon
+										style={{
+											marginRight: '0.5rem',
+										}}
+									/>{' '}
+									Code
+								</Button>
+							</a>
+							<a
+								href="https://uscovidtestinglocations.com/"
+								target="_blank"
+							>
+								<Button className={classes.button}>
+									{' '}
+									<CallMadeIcon
+										style={{
+											marginRight: '0.5rem',
+										}}
+									/>{' '}
+									Live
+								</Button>
+							</a>
+							<Button
+								className={classes.button}
+								onClick={covidHandler}
+							>
+								{' '}
+								<VisibilityIcon
+									style={{ marginRight: '0.5rem' }}
+								/>
+								See More
+							</Button>
+						</div>
+					</div>
+				</div>
+				<div className="project1-mobile">
+					<div className="picture-mobile">
+						<img
+							className="project-picture-mobile"
+							src={petsPreview2}
+						/>
+					</div>
+					<div className="home-about-mobile">
+						<div className="title-mobile">
+							<h3>My Pet Family</h3>
+						</div>
+						<div className="about-mobile">
+							<p>
+								A pet manager to help keep track of all your pet
+								needs. Add multiple pets and their respective
+								appointments, food, weights, preventatives,
+								medications, and veterinarians.
+							</p>
+						</div>
+
+						<div className="buttons mobile">
+							<a
+								href="https://github.com/juanorta/My_Pets"
+								target="_blank"
+							>
+								<Button className={classes.button}>
+									<CodeIcon
+										style={{
+											marginRight: '0.5rem',
+										}}
+									/>{' '}
+									Code
+								</Button>
+							</a>
+
+							<Button className={classes.button}>
+								{' '}
+								<CallMadeIcon
+									style={{
+										marginRight: '0.5rem',
+									}}
+								/>{' '}
+								Live
+							</Button>
+							<Button
+								className={classes.button}
+								onClick={petHandler}
+							>
+								{' '}
+								<VisibilityIcon
+									style={{ marginRight: '0.5rem' }}
+								/>
+								See More
+							</Button>
+						</div>
+					</div>
+				</div>
+
+				{/* laptop/desktop view */}
 				<div className="project" style={{ overflowY: 'hidden' }}>
 					<div className="picture">
 						<img
@@ -133,7 +249,7 @@ export default function Projects(props) {
 					</div>
 					<div className="info">
 						<div className="title">
-							<h3>US COVID-19 Testing Locations</h3>
+							<h2>US COVID-19 Testing Locations</h2>
 						</div>
 						<div className="home-about">
 							<p>
@@ -195,7 +311,7 @@ export default function Projects(props) {
 				<div className="project-2" style={{ overflowY: 'hidden' }}>
 					<div className="info-2">
 						<div className="title mpf">
-							<h3>My Pet Family</h3>
+							<h2>My Pet Family</h2>
 						</div>
 						<div className="home-about mpf">
 							<p>

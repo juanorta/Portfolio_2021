@@ -82,7 +82,7 @@
 }
 
 .columns {
-	background-color: transparent;
+	background-color: teal;
 	height: 100%;
 	/* text-align: center; */
 }
@@ -90,6 +90,7 @@
 .columns ul {
 	background-color: transparent;
 	display: inline-block;
+	/* display: flex; */
 	text-align: left;
 	padding-left: 0;
 }
@@ -105,6 +106,7 @@
 	margin-bottom: 2rem;
 	/* margin-left: -2rem; */
 	font-size: 1.5rem;
+	margin-right: 2rem;
 	/* font-size: 1.5rem;
 	margin-left: -2.5rem;
 	margin-bottom: 4rem; */
@@ -145,6 +147,7 @@
 @media (max-width: 768px) {
 	.skills-main-container {
 		height: auto;
+		background-color: transparent;
 	}
 
 	.spacer {
@@ -162,6 +165,16 @@
 
 	.skills-content li {
 		margin-bottom: 2rem;
+	}
+
+	.columns ul {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	.columns li {
+		font-size: 1.2rem;
+		/* flex-grow: 1; */
 	}
 
 	.columns.languages {
@@ -202,10 +215,20 @@
 	}
 }
 
+@media screen and (max-width: 1280px) {
+	.columns ul {
+		display: flex;
+	}
+}
+
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
 	.skills-main-container {
 		background-color: transparent;
 	}
+	/* 
+	.columns ul {
+		display: flex;
+	} */
 
 	.columns h2 {
 		margin-bottom: 1rem;
@@ -223,6 +246,10 @@
 
 	.spacer {
 		margin-top: 6%;
+	}
+
+	.columns ul {
+		display: inline-block;
 	}
 
 	.skills-content li {
