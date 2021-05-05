@@ -156,11 +156,10 @@ export default function CovidProject(props) {
 									it upon myself to build one.
 								</p> */}
 						<p>
-							I parsed a public table on
-							https://www.goodrx.com/blog/drive-thru-coronavirus-testing-near-me/
-							that had COVID-19 testing sites info from all over
-							the U.S. with Java, HtmlUnit (a GUI-less browser),
-							and stored the data in an Amazon RDS MySQL database.
+							I parsed data that had COVID-19 testing sites info
+							from all over the U.S. with Java, HtmlUnit (a
+							GUI-less browser), and stored the data in an Amazon
+							RDS MySQL database.
 						</p>
 						<p>
 							Once the data was stored, I used Express to build

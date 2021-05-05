@@ -233,7 +233,7 @@
 
 .picture-mobile {
 	margin-top: 1rem;
-	background-color: rebeccapurple;
+	background-color: transparent;
 	height: 20rem;
 }
 
@@ -276,7 +276,7 @@
 
 @media screen and (max-width: 600px) {
 	.projects-main-container {
-		background-color: rebeccapurple;
+		background-color: transparent;
 		padding-bottom: 5rem;
 		height: 270vw;
 		/* height: auto; */
