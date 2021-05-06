@@ -9,11 +9,19 @@ import CovidProject from './Views/mobile/CovidProject';
 import PetProject from './Views/mobile/PetProject';
 import ExerciseProject from './Views/mobile/ExerciseProject';
 function App() {
+	const [isDarkMode, setIsDarkMode] = useState(false);
+
+	const toggle = () => {
+		setIsDarkMode(!isDarkMode);
+	};
+
+	console.log('darkmode: ' + isDarkMode);
+
 	return (
 		<div className="App">
 			{/* <Home /> */}
 			<Router>
-				<Navbar />
+				<Navbar toggle={toggle} isDarkMode={isDarkMode} />
 				<Route
 					exact
 					path="/"

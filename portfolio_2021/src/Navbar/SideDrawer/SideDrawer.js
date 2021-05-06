@@ -47,6 +47,12 @@ const useStyles = makeStyles((theme) => ({
 			color: 'white',
 		},
 	},
+	menuIconDark: {
+		color: 'white',
+		'&:hover': {
+			color: 'black',
+		},
+	},
 	contentsActive: {
 		color: 'white',
 		backgroundColor: '#ff5757',
@@ -98,9 +104,9 @@ export default function SideDrawerNotLoggedIn(props) {
 	const [projectsStyle, setProjectsStyle] = useState(classes.listItemStyle);
 	const [contactStyle, setContactStyle] = useState(classes.listItemStyle);
 	const [listItemStyle, setListItemStyle] = useState(classes.listItemStyle);
-	const [isDarkMode, setIsDarkMode] = useState(() => false);
+	// const [isDarkMode, setIsDarkMode] = useState(() => false);
 	let location = useLocation().pathname;
-	console.log('current location: ' + location);
+	// console.log('current location: ' + location);
 
 	//functions to handle drawer open/close
 	const handleDrawerOpen = () => {
@@ -110,6 +116,12 @@ export default function SideDrawerNotLoggedIn(props) {
 	const handleDrawerClose = () => {
 		setOpen(false);
 	};
+
+	let menuIcon = classes.menuIcon;
+
+	if (props.isDarkMode) {
+		menuIcon = classes.menuIconDark;
+	}
 
 	return (
 		<div>
@@ -121,7 +133,7 @@ export default function SideDrawerNotLoggedIn(props) {
 				className={clsx(classes.menuButton, open && classes.hide)}
 				// className={clsx(classes.menuButton, open && classes.hide)}
 			>
-				<MenuIcon className={classes.menuIcon} />
+				<MenuIcon className={menuIcon} />
 			</IconButton>
 
 			{/* side drawer */}
@@ -297,8 +309,8 @@ export default function SideDrawerNotLoggedIn(props) {
 								}}
 							></ListItemIcon>
 							<DarkModeToggle
-								onChange={setIsDarkMode}
-								checked={isDarkMode}
+								onChange={props.toggle}
+								checked={props.isDarkMode}
 								size={50}
 							/>
 						</ListItem>

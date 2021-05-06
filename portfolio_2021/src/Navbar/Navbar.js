@@ -82,8 +82,22 @@ export default function Navbar(props) {
 	const classes = useStyles();
 	const [anchorEl, setAnchorEl] = useState(null);
 	const [open, setOpen] = useState(false);
-	const [isDarkMode, setIsDarkMode] = useState(() => false);
+	// const [isDarkMode, setIsDarkMode] = useState(props.isDarkMode);
 	let menuClass = 'not-mobile';
+
+	let appHeaderWrapper = 'app-header-wrapper';
+	let appHeader = 'app-header';
+	let appNav = 'app-nav';
+	let navlink = 'navlink';
+
+	if (props.isDarkMode) {
+		appHeaderWrapper = 'app-header-wrapper-dark';
+		appHeader = 'app-header-dark';
+		appNav = 'app-nav-dark';
+		navlink = 'navlink-dark';
+	}
+
+	// console.log(isDarkMode);
 
 	return (
 		<div className="navbar-main-container">
@@ -96,17 +110,20 @@ export default function Navbar(props) {
 					}}
 				>
 					<Toolbar
-						className="app-header-wrapper"
-						style={{ color: 'red' }}
+						className={appHeaderWrapper}
+
 						// id="back-to-top-anchor"
 					>
 						{/* will load 2 different side drawers depending if user is authenticated or not*/}
 						<div className="hamburger-menu">
-							<SideDrawer />
+							<SideDrawer
+								isDarkMode={props.isDarkMode}
+								toggle={props.toggle}
+							/>
 						</div>
 
 						{/* goes to home when logo is clicked */}
-						<div className="app-header">
+						<div className={appHeader}>
 							<ul className="app-branding">
 								<li>
 									<NavLink to="/" className="navlink">
@@ -137,7 +154,7 @@ export default function Navbar(props) {
 
 							<div className="app-options">
 								{/* will load different navbar content depending if user is authenticated */}
-								<nav className="app-nav">
+								<nav className={appNav}>
 									<ul className="menu-items">
 										<li>
 											<Link
@@ -177,7 +194,7 @@ export default function Navbar(props) {
 										</li>
 										<li>
 											<a
-												className="navlink"
+												className={navlink}
 												href={resume}
 												target="_blank"
 											>
@@ -193,8 +210,8 @@ export default function Navbar(props) {
 												}}
 											>
 												<DarkModeToggle
-													onChange={setIsDarkMode}
-													checked={isDarkMode}
+													onChange={props.toggle}
+													checked={props.isDarkMode}
 													size={50}
 												/>
 											</a>
