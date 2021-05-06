@@ -173,18 +173,6 @@ export default function Navbar(props) {
 										<li>
 											<Link
 												activeClass="active"
-												to="skills"
-												spy={true}
-												smooth={true}
-												offset={0}
-												duration={500}
-											>
-												<a>Skills</a>
-											</Link>
-										</li>
-										<li>
-											<Link
-												activeClass="active"
 												to="projects"
 												spy={true}
 												smooth={true}
@@ -194,6 +182,19 @@ export default function Navbar(props) {
 												<a>Projects</a>
 											</Link>
 										</li>
+										<li>
+											<Link
+												activeClass="active"
+												to="skills"
+												spy={true}
+												smooth={true}
+												offset={0}
+												duration={500}
+											>
+												<a>Skills</a>
+											</Link>
+										</li>
+
 										<li>
 											<Link
 												activeClass="active"

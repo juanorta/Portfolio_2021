@@ -181,6 +181,32 @@ export default function SideDrawerNotLoggedIn(props) {
 									// 	setSkillsStyle(classes.listItemStyle);
 									// }}
 								>
+									<Link
+										activeClass="active"
+										to="projects"
+										spy={true}
+										smooth={true}
+										offset={0}
+										duration={500}
+									>
+										<ListItem
+											className={projectsStyle}
+											button
+											onClick={handleDrawerClose}
+											style={{
+												color: 'white',
+												height: '4rem',
+											}}
+										>
+											<ListItemIcon
+												style={{
+													color: 'white',
+													height: '4rem',
+												}}
+											></ListItemIcon>
+											Projects
+										</ListItem>
+									</Link>
 									<ListItem
 										className={skillsStyle}
 										button
@@ -202,32 +228,6 @@ export default function SideDrawerNotLoggedIn(props) {
 									</ListItem>
 								</Link>
 
-								<Link
-									activeClass="active"
-									to="projects"
-									spy={true}
-									smooth={true}
-									offset={0}
-									duration={500}
-								>
-									<ListItem
-										className={projectsStyle}
-										button
-										onClick={handleDrawerClose}
-										style={{
-											color: 'white',
-											height: '4rem',
-										}}
-									>
-										<ListItemIcon
-											style={{
-												color: 'white',
-												height: '4rem',
-											}}
-										></ListItemIcon>
-										Projects
-									</ListItem>
-								</Link>
 								<Link
 									activeClass="active"
 									to="contact"
