@@ -7,7 +7,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import ReactTooltip from 'react-tooltip';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import { Link, animateScroll as scroll } from 'react-scroll';
-import resume from '../../../resume/resume-portfolio.pdf';
+import resumePortfolio from '../../../resume/resume-portfolio.pdf';
 
 const useStyles = makeStyles((theme) => ({
 	linkedIn: {
@@ -121,7 +121,7 @@ export default function Intro(props) {
 						</a>
 					</li>
 					<li className="link" data-tip data-for="resume">
-						<a href={resume} target="_blank">
+						<a href={resumePortfolio} target="_blank">
 							<FileCopyIcon className={resume} />
 						</a>
 					</li>
