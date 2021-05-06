@@ -34,14 +34,25 @@ const useStyles = makeStyles((theme) => ({
 	inputDark: {
 		color: 'white',
 		'& .MuiInput-underline:before': {
-			borderBottom: `1px solid white`,
+			borderBottom: `0.5px solid white`,
 		},
-		'& .MuiOutlinedInput-outlined-multiline-static': {
-			color: 'white',
+		'& .MuiInput-underline:hover': {
+			borderBottom: `0.5px solid white`,
 		},
+		// '& .MuiOutlinedInput-outlined-multiline-static': {
+		// 	color: 'white',
+		// },
 		// '& .MuiInputBase-root': {
 		// 	color: 'white',
 		// },
+	},
+
+	cssLabel: {
+		color: 'white',
+	},
+	notchedOutline: {
+		borderWidth: '0.5px',
+		borderColor: 'white !important',
 	},
 
 	rootDark: {
@@ -178,12 +189,17 @@ export default function Contact(props) {
 					<TextField
 						className={input}
 						InputLabelProps={{
-							className: input,
+							classes: {
+								root: classes.cssLabel,
+							},
 						}}
 						InputProps={{
 							className: input,
+							classes: {
+								notchedOutline: classes.notchedOutline,
+							},
 						}}
-						id="outlined-multiline-static"
+						// id="outlined-multiline-static"
 						label="Message"
 						multiline
 						rows={4}

@@ -21,11 +21,13 @@ const useStyles = makeStyles((theme) => ({
 	},
 	linkedInDark: {
 		color: 'white',
+
 		marginTop: '-0.5rem',
 		height: '2.5rem',
 		width: '2.5rem',
 		'&:hover': {
 			color: '#2867B2',
+			backgroundColor: 'white',
 		},
 	},
 	github: {
