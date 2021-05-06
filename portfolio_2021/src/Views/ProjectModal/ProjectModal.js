@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ProjectModal.css';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Fade from '@material-ui/core/Fade';
 import covidGif from '../../gifs/covid-portfolio2.gif';
@@ -10,6 +10,7 @@ import Chip from '@material-ui/core/Chip';
 import { Button } from '@material-ui/core';
 import CallMadeIcon from '@material-ui/icons/CallMade';
 import CodeIcon from '@material-ui/icons/Code';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -29,6 +30,26 @@ const useStyles = makeStyles((theme) => ({
 		padding: theme.spacing(2, 4, 3),
 		height: '45rem',
 		width: '85rem',
+	},
+	projectMd: {
+		backgroundColor: theme.palette.background.paper,
+		border: '2px solid none',
+		outline: 'none',
+		borderRadius: '10px',
+		boxShadow: theme.shadows[5],
+		padding: theme.spacing(2, 4, 3),
+		height: '40rem',
+		width: '70rem',
+	},
+	projectMdDark: {
+		backgroundColor: '#212121',
+		border: '2px solid none',
+		outline: 'none',
+		borderRadius: '10px',
+		boxShadow: theme.shadows[5],
+		padding: theme.spacing(2, 4, 3),
+		height: '40rem',
+		width: '70rem',
 	},
 	projectDark: {
 		backgroundColor: '#212121',
@@ -53,6 +74,22 @@ const useStyles = makeStyles((theme) => ({
 		borderColor: '#212121',
 		color: '#212121',
 	},
+
+	chipMd: {
+		borderRadius: '5px',
+		margin: '0.25rem',
+		borderColor: '#212121',
+		color: '#212121',
+		height: '1.33rem',
+	},
+
+	chipMdDark: {
+		borderRadius: '5px',
+		margin: '0.25rem',
+		borderColor: '#ff5757',
+		color: '#ff5757',
+		height: '1.33rem',
+	},
 	chipDark: {
 		borderRadius: '5px',
 		margin: '0.5rem',
@@ -71,24 +108,56 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ProjectModal(props) {
 	const classes = useStyles();
+	const theme = useTheme();
 	// getModalStyle is not a pure function, we roll the style only on the first render
 	// const [modalStyle] = React.useState(getModalStyle);
 	const [open, setOpen] = useState(props.openModal);
 	const [isCovid, setIsCovid] = useState(props.isCovid);
 	const [isPet, setIsPet] = useState(props.isPet);
 	const [isExercise, setIsExercise] = useState(props.isExercise);
+	// const matches = useMediaQuery('(max-width:1440px)');
+	const matches = useMediaQuery(theme.breakpoints.down('lg'));
+
+	console.log('matches ' + matches);
 
 	let chip = classes.chip;
 	let project = classes.project;
 	let gif = 'gif';
 	let description = 'description';
+	let about = 'about';
+	// if (matches) {
+	// 	project = classes.projectMd;
+	// 	chip = classes.chipMd;
+	// 	description = 'description-md';
+	// 	about = 'about-md';
 
-	if (props.isDarkMode) {
+	// 	if (props.isDarkMode) {
+	// 		description = 'description-md-dark';
+	// 		// chip = classes.chipDark;
+	// 	}
+	// }
+
+	if (!props.isDarkMode && matches) {
+		project = classes.projectMd;
+		chip = classes.chipMd;
+		description = 'description-md';
+		about = 'about-md';
+	} else if (props.isDarkMode && matches) {
+		project = classes.projectMdDark;
+		chip = classes.chipMdDark;
+		gif = 'gif-dark';
+		description = 'description-md-dark';
+		about = 'about-md';
+		gif = 'gif-dark';
+	} else if (props.isDarkMode && !matches) {
 		chip = classes.chipDark;
 		project = classes.projectDark;
 		gif = 'gif-dark';
 		description = 'description-dark';
 	}
+
+	console.log(gif);
+
 	// const handleOpen = () => {
 	// 	setOpen(true);
 	// };
@@ -273,7 +342,7 @@ export default function ProjectModal(props) {
 
 							{isCovid ? (
 								<div>
-									<div className="about">
+									<div className={about}>
 										{' '}
 										<h2>About</h2>
 										<p>
@@ -327,7 +396,7 @@ export default function ProjectModal(props) {
 														marginRight: '0.5rem',
 													}}
 												/>{' '}
-												View Live
+												Live
 											</Button>
 										</a>
 										<a
@@ -342,7 +411,7 @@ export default function ProjectModal(props) {
 														marginRight: '0.5rem',
 													}}
 												/>{' '}
-												View Code
+												Code
 											</Button>
 										</a>
 										<a>
@@ -359,7 +428,7 @@ export default function ProjectModal(props) {
 
 							{isPet ? (
 								<div>
-									<div className="about">
+									<div className={about}>
 										{' '}
 										<h2>About</h2>
 										<p>
@@ -416,7 +485,7 @@ export default function ProjectModal(props) {
 														marginRight: '0.5rem',
 													}}
 												/>{' '}
-												View Live
+												Live
 											</Button>
 										</a>
 										<a
@@ -431,7 +500,7 @@ export default function ProjectModal(props) {
 														marginRight: '0.5rem',
 													}}
 												/>{' '}
-												View Code
+												Code
 											</Button>
 										</a>
 										<a>

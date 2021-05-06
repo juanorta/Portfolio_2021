@@ -37,6 +37,26 @@
 	border-bottom-right-radius: 5px;
 }
 
+.description-md {
+	background-color: rgb(245, 245, 245);
+
+	width: 30%;
+	height: 100%;
+	float: right;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.description-md-dark {
+	background-color: rgb(46, 46, 46);
+	color: white;
+	width: 30%;
+	height: 100%;
+	float: right;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
 .description h2,
 p {
 	margin-left: 0.5rem;
@@ -46,6 +66,16 @@ p {
 	margin-left: 0.5rem;
 }
 
+.description-md h2 {
+	margin-left: 0.5rem;
+	font-size: 1.3rem;
+}
+
+.description-md-dark h2 {
+	margin-left: 0.5rem;
+	font-size: 1.3rem;
+}
+
 .tech-stack {
 	background-color: transparent;
 	height: auto;
@@ -53,17 +83,33 @@ p {
 	justify-content: left;
 	flex-wrap: wrap;
 	display: flex;
+	margin-left: 0.5rem;
 }
 
 .about {
 	width: 98%;
 	justify-content: center;
+	background-color: transparent;
+	/* height: 17rem; */
+	/* overflow: scroll; */
+}
+
+.about-md {
+	margin-top: 1rem;
+	width: 98%;
+	justify-content: center;
+	background-color: transparent;
+	/* height: 23rem; */
+	height: 25rem;
+	overflow: scroll;
 }
 
 .project-buttons {
 	background-color: transparent;
 	width: 95%;
 	margin: 0 auto;
+	margin-top: 1rem;
+	margin-left: -0rem;
 }
 
 .project-buttons a {

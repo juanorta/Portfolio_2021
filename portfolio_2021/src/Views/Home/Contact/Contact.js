@@ -4,7 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import DarkModeToggle from 'react-dark-mode-toggle';
 import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
 import emailjs from 'emailjs-com';
 import Alert from 'react-s-alert';
@@ -101,6 +101,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Contact(props) {
 	const classes = useStyles();
+
 	let contactMainContainer = 'contact-main-container';
 	let root = classes.root;
 	let input = classes.input;

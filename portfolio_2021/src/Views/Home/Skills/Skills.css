@@ -76,6 +76,12 @@
 	margin: 0 auto; */
 }
 
+.skills-main-container-dark h1 {
+	font-weight: 800;
+	font-size: 3rem;
+	background-color: transparent;
+}
+
 .skills-main-container-dark ul li {
 	font-weight: 200;
 }

@@ -24,6 +24,12 @@
 	margin: 0 auto; */
 }
 
+.projects-main-container-dark h1 {
+	font-weight: 800;
+	font-size: 3rem;
+	background-color: transparent;
+}
+
 .projects-content {
 	background-color: transparent;
 	height: 40vh;
