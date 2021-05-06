@@ -48,9 +48,19 @@ const useStyles = makeStyles((theme) => ({
 	},
 
 	cssLabel: {
+		color: 'black',
+	},
+
+	cssLabelDark: {
 		color: 'white',
 	},
+
 	notchedOutline: {
+		borderWidth: '1px',
+		borderColor: 'black !important',
+	},
+
+	notchedOutlineDark: {
 		borderWidth: '0.5px',
 		borderColor: 'white !important',
 	},
@@ -94,11 +104,15 @@ export default function Contact(props) {
 	let contactMainContainer = 'contact-main-container';
 	let root = classes.root;
 	let input = classes.input;
+	let cssLabel = classes.cssLabel;
+	let notchedOutline = classes.notchedOutline;
 
 	if (props.isDarkMode) {
 		contactMainContainer = 'contact-main-container-dark';
 		root = classes.rootDark;
 		input = classes.inputDark;
+		cssLabel = classes.cssLabelDark;
+		notchedOutline = classes.notchedOutlineDark;
 	}
 	function sendEmail(e) {
 		e.preventDefault();
@@ -190,13 +204,13 @@ export default function Contact(props) {
 						className={input}
 						InputLabelProps={{
 							classes: {
-								root: classes.cssLabel,
+								root: cssLabel,
 							},
 						}}
 						InputProps={{
 							className: input,
 							classes: {
-								notchedOutline: classes.notchedOutline,
+								notchedOutline: notchedOutline,
 							},
 						}}
 						// id="outlined-multiline-static"
