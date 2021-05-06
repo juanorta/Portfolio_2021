@@ -394,6 +394,7 @@ export default function Projects(props) {
 
 			{viewProjectClicked ? (
 				<ProjectModal
+					isDarkMode={props.isDarkMode}
 					SetOpenModalToFalse={SetOpenModalToFalse}
 					openModal={openModal}
 					isCovid={isCovid}

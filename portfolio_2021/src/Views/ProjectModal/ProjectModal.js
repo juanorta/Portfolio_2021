@@ -30,6 +30,16 @@ const useStyles = makeStyles((theme) => ({
 		height: '45rem',
 		width: '85rem',
 	},
+	projectDark: {
+		backgroundColor: '#212121',
+		border: '2px solid none',
+		outline: 'none',
+		borderRadius: '10px',
+		boxShadow: theme.shadows[5],
+		padding: theme.spacing(2, 4, 3),
+		height: '45rem',
+		width: '85rem',
+	},
 	modal: {
 		display: 'flex',
 		alignItems: 'center',
@@ -40,6 +50,14 @@ const useStyles = makeStyles((theme) => ({
 	chip: {
 		borderRadius: '5px',
 		margin: '0.5rem',
+		borderColor: '#212121',
+		color: '#212121',
+	},
+	chipDark: {
+		borderRadius: '5px',
+		margin: '0.5rem',
+		borderColor: '#ff5757',
+		color: '#ff5757',
 	},
 	viewLive: {
 		marginRight: '1rem',
@@ -60,6 +78,17 @@ export default function ProjectModal(props) {
 	const [isPet, setIsPet] = useState(props.isPet);
 	const [isExercise, setIsExercise] = useState(props.isExercise);
 
+	let chip = classes.chip;
+	let project = classes.project;
+	let gif = 'gif';
+	let description = 'description';
+
+	if (props.isDarkMode) {
+		chip = classes.chipDark;
+		project = classes.projectDark;
+		gif = 'gif-dark';
+		description = 'description-dark';
+	}
 	// const handleOpen = () => {
 	// 	setOpen(true);
 	// };
@@ -83,8 +112,8 @@ export default function ProjectModal(props) {
 				aria-describedby="simple-modal-description"
 			>
 				<Fade in={open}>
-					<div className={classes.project}>
-						<div className="gif">
+					<div className={project}>
+						<div className={gif}>
 							{isCovid ? (
 								<div>
 									<h1>U.S. COVID-19 Testing Locations</h1>
@@ -107,73 +136,73 @@ export default function ProjectModal(props) {
 							) : null}
 							{isExercise ? <h1>Lift Log IO</h1> : null}
 						</div>
-						<div className="description">
+						<div className={description}>
 							<h2>Technology Stack Used</h2>
 							{isCovid ? (
 								<div className="tech-stack">
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="Java"
 										color="primary"
 									/>
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="HtmlUnit"
 										color="primary"
 									/>
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="NodeJS"
 										color="primary"
 									/>
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="ExpressJS"
 										color="primary"
 									/>
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="ReactJS"
 										color="primary"
 									/>
 
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="MySQL"
 										color="primary"
 									/>
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="Amazon RDS"
 										color="primary"
 									/>
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="Google Places API"
 										color="primary"
 									/>
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="Google Maps API"
 										color="primary"
 									/>
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="Google Geocoding API"
 										color="primary"
 									/>
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="Digital Ocean"
 										color="primary"
@@ -184,57 +213,57 @@ export default function ProjectModal(props) {
 							{isPet ? (
 								<div className="tech-stack">
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="Java"
 										color="primary"
 									/>
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="Spring Boot"
 										color="primary"
 									/>
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="Spring Security"
 										color="primary"
 									/>
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="Spring JPA"
 										color="primary"
 									/>
 
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="MySQL"
 										color="primary"
 									/>
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="Amazon RDS"
 										color="primary"
 									/>
 
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="Digital Ocean"
 										color="primary"
 									/>
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="ReactJS"
 										color="primary"
 									/>
 									<Chip
-										className={classes.chip}
+										className={chip}
 										variant="outlined"
 										label="Material-UI"
 										color="primary"

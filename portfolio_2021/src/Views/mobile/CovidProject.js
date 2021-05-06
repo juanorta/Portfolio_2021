@@ -37,10 +37,13 @@ const useStyles = makeStyles((theme) => ({
 	chip: {
 		borderRadius: '5px',
 		margin: '0.5rem',
+		borderColor: '#ff5757',
+		color: '#ff5757',
 		// backgroundColor: 'red',
 	},
 	viewLive: {
 		// marginRight: '1rem',
+		color: '#ff5757',
 		color: '#ff5757',
 	},
 	viewCode: {
@@ -76,7 +79,7 @@ export default function CovidProject(props) {
 							className={classes.chip}
 							variant="outlined"
 							label="Java"
-							color="primary"
+							// color="secondary"
 						/>
 						<Chip
 							className={classes.chip}

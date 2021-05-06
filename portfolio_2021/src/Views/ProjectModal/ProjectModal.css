@@ -5,6 +5,13 @@
 	float: left;
 }
 
+.gif-dark {
+	color: white;
+	width: 70%;
+	height: 100%;
+	float: left;
+}
+
 .project-gif {
 	width: 99%;
 	margin-top: 5%;
@@ -12,6 +19,17 @@
 
 .description {
 	background-color: rgb(245, 245, 245);
+
+	width: 30%;
+	height: 100%;
+	float: right;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.description-dark {
+	background-color: rgb(46, 46, 46);
+	color: white;
 	width: 30%;
 	height: 100%;
 	float: right;
@@ -20,6 +38,10 @@
 }
 
 .description h2,
+p {
+	margin-left: 0.5rem;
+}
+.description-dark h2,
 p {
 	margin-left: 0.5rem;
 }
