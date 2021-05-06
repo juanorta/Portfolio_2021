@@ -76,6 +76,10 @@
 	margin: 0 auto; */
 }
 
+.skills-main-container-dark ul li {
+	font-weight: 200;
+}
+
 .columns.languages {
 	background-color: transparent;
 	margin-right: 12%;
