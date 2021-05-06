@@ -169,7 +169,14 @@
 		width: 2rem;
 	}
 
+	.line1-dark {
+		width: 2rem;
+	}
+
 	.line2 {
+		width: 2rem;
+	}
+	.line2-dark {
 		width: 2rem;
 	}
 }

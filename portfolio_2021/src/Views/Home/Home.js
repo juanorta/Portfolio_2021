@@ -16,8 +16,9 @@ export default function Home(props) {
 	return (
 		<div className={homeMainContainer}>
 			<Intro isDarkMode={props.isDarkMode} />
-			<Skills isDarkMode={props.isDarkMode} />
 			<Projects isDarkMode={props.isDarkMode} />
+			<Skills isDarkMode={props.isDarkMode} />
+
 			<Contact isDarkMode={props.isDarkMode} />
 		</div>
 	);

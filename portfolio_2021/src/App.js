@@ -36,7 +36,12 @@ function App() {
 	);
 
 	return (
-		<div className={App}>
+		<div
+			className={App}
+			style={{
+				overflowX: 'hidden !important',
+			}}
+		>
 			{/* <Home /> */}
 			<Router>
 				<Navbar toggle={toggle} isDarkMode={isDarkMode} />

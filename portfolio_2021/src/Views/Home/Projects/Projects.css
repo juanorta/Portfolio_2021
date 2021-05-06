@@ -305,10 +305,17 @@
 
 @media screen and (max-width: 600px) {
 	.projects-main-container {
-		background-color: transparent;
-		padding-bottom: 5rem;
-		height: 270vw;
+		/* background-color: red; */
+		padding-bottom: 0;
+		height: auto;
+		/* height: 270vw; */
 		/* height: auto; */
+	}
+
+	.projects-main-container-dark {
+		/* background-color: red; */
+		height: auto;
+		padding-bottom: 0;
 	}
 
 	.projects-content {
@@ -380,6 +387,12 @@
 	.projects-main-container {
 		/* height: 130vh; */
 		background-color: transparent;
+		/* height: 135vh; */
+	}
+	.projects-main-container-dark {
+		/* height: 130vh; */
+		background-color: transparent;
+		/* height: 135vh; */
 	}
 
 	.project {
@@ -440,6 +453,12 @@
 @media screen and (min-width: 1280px) {
 	.projects-main-container {
 		background-color: transparent;
+		height: 155vh;
+	}
+
+	.projects-main-container-dark {
+		background-color: transparent;
+		height: 155vh;
 	}
 
 	.projects-content {
@@ -522,9 +541,14 @@
 
 @media screen and (min-width: 2040px) {
 	.projects-main-container {
-		height: 110vh;
+		height: 100vh;
+		padding-bottom: 7rem;
 	}
 
+	.projects-main-container-dark {
+		height: 100vh;
+		padding-bottom: 7rem;
+	}
 	.projects-content {
 		width: 69%;
 	}
@@ -535,6 +559,7 @@
 	}
 
 	.project-2 {
+		background-color: transparent;
 		width: 100rem;
 		height: 32rem;
 		margin-left: 1.5%;
