@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './Navbar/Navbar';
@@ -9,6 +9,11 @@ import CovidProject from './Views/mobile/CovidProject';
 import PetProject from './Views/mobile/PetProject';
 import ExerciseProject from './Views/mobile/ExerciseProject';
 function App() {
+	useEffect(() => {
+		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			setIsDarkMode(true);
+		}
+	}, []);
 	const [isDarkMode, setIsDarkMode] = useState(false);
 
 	const toggle = () => {
@@ -23,6 +28,11 @@ function App() {
 		App = 'App-dark';
 		document.body.style.background = '#212121';
 	}
+
+	console.log(
+		'prefers dark mode = ' +
+			window.matchMedia('(prefers-color-scheme: dark)').matches
+	);
 
 	return (
 		<div className={App}>
