@@ -25,6 +25,40 @@ const useStyles = makeStyles((theme) => ({
 			},
 		},
 	},
+	input: {
+		color: 'black',
+		'& .MuiInput-underline:before': {
+			borderBottom: `1px solid black`,
+		},
+	},
+	inputDark: {
+		color: 'white',
+		'& .MuiInput-underline:before': {
+			borderBottom: `1px solid white`,
+		},
+		'& .MuiOutlinedInput-outlined-multiline-static': {
+			color: 'white',
+		},
+		// '& .MuiInputBase-root': {
+		// 	color: 'white',
+		// },
+	},
+
+	rootDark: {
+		'& .MuiTextField-root': {
+			margin: theme.spacing(1),
+			width: '90%',
+			marginTop: '2rem',
+
+			'& label.Mui-focused': {
+				color: 'white',
+			},
+
+			'& .MuiInput-underline:after': {
+				borderBottomColor: 'white',
+			},
+		},
+	},
 
 	button: {
 		'&:hover': {
@@ -45,6 +79,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Contact(props) {
+	const classes = useStyles();
+	let contactMainContainer = 'contact-main-container';
+	let root = classes.root;
+	let input = classes.input;
+
+	if (props.isDarkMode) {
+		contactMainContainer = 'contact-main-container-dark';
+		root = classes.rootDark;
+		input = classes.inputDark;
+	}
 	function sendEmail(e) {
 		e.preventDefault();
 		Alert.closeAll();
@@ -70,9 +114,8 @@ export default function Contact(props) {
 		e.target.reset();
 	}
 
-	const classes = useStyles();
 	return (
-		<div className="contact-main-container" id="contact">
+		<div className={contactMainContainer} id="contact">
 			<div className="spacer-contact"></div>
 			<Grid container lg={3} md={8} className="contact-title">
 				<h1>
@@ -91,15 +134,28 @@ export default function Contact(props) {
 				</h1>
 			</Grid>
 			<Grid container lg={4} md={8} sm={8} className="form-grid">
-				<form className={classes.root} onSubmit={sendEmail}>
+				<form className={root} onSubmit={sendEmail}>
 					<TextField
-						// className={classes.TextField}
+						className={input}
+						InputLabelProps={{
+							className: input,
+						}}
+						InputProps={{
+							className: input,
+						}}
 						required
 						id="standard-required"
 						label="Name"
 						name="name"
 					/>
 					<TextField
+						className={input}
+						InputLabelProps={{
+							className: input,
+						}}
+						InputProps={{
+							className: input,
+						}}
 						required
 						id="standard-required"
 						label="Your Email"
@@ -107,12 +163,26 @@ export default function Contact(props) {
 						name="email"
 					/>
 					<TextField
+						className={input}
+						InputLabelProps={{
+							className: input,
+						}}
+						InputProps={{
+							className: input,
+						}}
 						required
 						id="standard-required"
 						label="Subject"
 						name="subject"
 					/>
 					<TextField
+						className={input}
+						InputLabelProps={{
+							className: input,
+						}}
+						InputProps={{
+							className: input,
+						}}
 						id="outlined-multiline-static"
 						label="Message"
 						multiline

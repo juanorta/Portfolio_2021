@@ -4,6 +4,13 @@
 	justify-content: center;
 }
 
+.contact-main-container-dark {
+	background-color: transparent;
+	height: 115vh;
+	justify-content: center;
+	color: white;
+}
+
 .contact-title {
 	background-color: transparent;
 	margin: 0 auto;

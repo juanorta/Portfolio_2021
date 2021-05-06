@@ -17,25 +17,38 @@ function App() {
 
 	console.log('darkmode: ' + isDarkMode);
 
+	let App = 'App';
+
+	if (isDarkMode) {
+		App = 'App-dark';
+		document.body.style.background = '#212121';
+	}
+
 	return (
-		<div className="App">
+		<div className={App}>
 			{/* <Home /> */}
 			<Router>
 				<Navbar toggle={toggle} isDarkMode={isDarkMode} />
 				<Route
 					exact
 					path="/"
-					render={(props) => <Home {...props} />}
+					render={(props) => (
+						<Home isDarkMode={isDarkMode} {...props} />
+					)}
 				></Route>
 				<Route
 					exact
 					path="/covidProject"
-					render={(props) => <CovidProject {...props} />}
+					render={(props) => (
+						<CovidProject isDarkMode={isDarkMode} {...props} />
+					)}
 				/>
 				<Route
 					exact
 					path="/myPetFamily"
-					render={(props) => <PetProject {...props} />}
+					render={(props) => (
+						<PetProject isDarkMode={isDarkMode} {...props} />
+					)}
 				/>
 				<Route exact path="/liftLog" component={ExerciseProject} />
 			</Router>

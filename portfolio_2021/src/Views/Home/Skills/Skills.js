@@ -4,9 +4,15 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 export default function Skills(props) {
+	let skillsMainContainer = 'skills-main-container';
+
+	if (props.isDarkMode) {
+		skillsMainContainer = 'skills-main-container-dark';
+	}
+
 	return (
 		<div
-			className="skills-main-container"
+			className={skillsMainContainer}
 			id="skills"
 			style={{
 				overflowY: 'hidden',

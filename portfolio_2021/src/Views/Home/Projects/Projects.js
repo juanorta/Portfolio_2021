@@ -46,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
 		marginRight: '0.25rem',
 		color: '#ff5757',
 		fontFamily: 'Open Sans',
+		// textDecoration: 'none',
 	},
 	label: {
 		textTransform: 'capitalize',
@@ -59,6 +60,18 @@ export default function Projects(props) {
 	const [isCovid, setIsCovid] = useState(false);
 	const [isPet, setIsPet] = useState(false);
 	const [isExercise, setIsExercise] = useState(false);
+
+	let projectsMainContainer = 'projects-main-container';
+	let projectPicture = 'project-picture';
+	let projectPicture2 = 'project-picture-2';
+	let projectPictureMobile = 'project-picture-mobile';
+
+	if (props.isDarkMode) {
+		projectsMainContainer = 'projects-main-container-dark';
+		projectPicture = 'project-picture-dark';
+		projectPicture2 = 'project-picture-2-dark';
+		projectPictureMobile = 'project-picture-mobile-dark';
+	}
 
 	const SetOpenModalToFalse = () => {
 		setOpenModal(false);
@@ -93,7 +106,7 @@ export default function Projects(props) {
 	};
 
 	return (
-		<div className="projects-main-container" id="projects">
+		<div className={projectsMainContainer} id="projects">
 			<div className="spacer"></div>
 			<Grid
 				container
@@ -123,7 +136,7 @@ export default function Projects(props) {
 				<div className="project1-mobile covid">
 					<div className="picture-mobile">
 						<img
-							className="project-picture-mobile"
+							className={projectPictureMobile}
 							src={covidPreview2}
 						/>
 					</div>
@@ -144,6 +157,7 @@ export default function Projects(props) {
 							<a
 								href="https://github.com/juanorta/COVID-19_Testing_Locations"
 								target="_blank"
+								className="navlink"
 							>
 								<Button className={classes.button}>
 									<CodeIcon
@@ -157,6 +171,7 @@ export default function Projects(props) {
 							<a
 								href="https://uscovidtestinglocations.com/"
 								target="_blank"
+								className="navlink"
 							>
 								<Button className={classes.button}>
 									{' '}
@@ -168,7 +183,7 @@ export default function Projects(props) {
 									Live
 								</Button>
 							</a>
-							<NavLink to="/covidProject">
+							<NavLink to="/covidProject" className="navlink">
 								<Button
 									className={classes.button}
 
@@ -187,7 +202,7 @@ export default function Projects(props) {
 				<div className="project1-mobile">
 					<div className="picture-mobile">
 						<img
-							className="project-picture-mobile"
+							className={projectPictureMobile}
 							src={petsPreview2}
 						/>
 					</div>
@@ -208,6 +223,7 @@ export default function Projects(props) {
 							<a
 								href="https://github.com/juanorta/My_Pets"
 								target="_blank"
+								className="navlink"
 							>
 								<Button className={classes.button}>
 									<CodeIcon
@@ -228,7 +244,7 @@ export default function Projects(props) {
 								/>{' '}
 								Live
 							</Button>
-							<NavLink to="/myPetFamily">
+							<NavLink to="/myPetFamily" className="navlink">
 								<Button
 									className={classes.button}
 									// onClick={petHandler}
@@ -248,7 +264,7 @@ export default function Projects(props) {
 				<div className="project" style={{ overflowY: 'hidden' }}>
 					<div className="picture">
 						<img
-							className="project-picture"
+							className={projectPicture}
 							src={covidPreview2}
 							// style={{ width: '35rem' }}
 						/>
@@ -269,6 +285,7 @@ export default function Projects(props) {
 
 						<div className="buttons">
 							<a
+								className="navlink"
 								href="https://github.com/juanorta/COVID-19_Testing_Locations"
 								target="_blank"
 							>
@@ -282,6 +299,7 @@ export default function Projects(props) {
 								</Button>
 							</a>
 							<a
+								className="navlink"
 								href="https://uscovidtestinglocations.com/"
 								target="_blank"
 							>
@@ -332,6 +350,7 @@ export default function Projects(props) {
 							<a
 								href="https://github.com/juanorta/My_Pets"
 								target="_blank"
+								className="navlink"
 							>
 								<Button className={classes.button}>
 									<CodeIcon
@@ -365,7 +384,7 @@ export default function Projects(props) {
 						</div>
 					</div>
 					<div className="picture">
-						<img src={petsPreview2} className="project-picture-2" />
+						<img src={petsPreview2} className={projectPicture2} />
 					</div>
 				</div>
 			</div>

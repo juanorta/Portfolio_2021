@@ -50,16 +50,18 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PetProject(props) {
 	const classes = useStyles();
+	let covidMainContainer = 'covid-main-container';
+	let gif = 'project-gif-mobile';
+	if (props.isDarkMode) {
+		covidMainContainer = 'covid-main-container-dark';
+		gif = 'project-gif-mobile-dark';
+	}
 	return (
-		<div className="covid-main-container">
+		<div className={covidMainContainer}>
 			<h1>My Pet Family</h1>
 
 			<div className="mobile-sub-container">
-				<GifPlayer
-					className="project-gif-mobile"
-					gif={petGif}
-					autoplay
-				/>
+				<GifPlayer className={gif} gif={petGif} autoplay />
 				<div className="mobile-description">
 					<h2>Technology Stack Used</h2>
 					<div className="mobile-tech-stack">

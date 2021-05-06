@@ -7,12 +7,18 @@ import Contact from './Contact/Contact';
 import { useLocation } from 'react-router';
 
 export default function Home(props) {
+	let homeMainContainer = 'home-main-container';
+
+	if (props.isDarkMode) {
+		homeMainContainer = 'home-main-container-dark';
+	}
+
 	return (
-		<div className="home-main-container">
-			<Intro />
-			<Skills />
-			<Projects />
-			<Contact />
+		<div className={homeMainContainer}>
+			<Intro isDarkMode={props.isDarkMode} />
+			<Skills isDarkMode={props.isDarkMode} />
+			<Projects isDarkMode={props.isDarkMode} />
+			<Contact isDarkMode={props.isDarkMode} />
 		</div>
 	);
 }

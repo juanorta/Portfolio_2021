@@ -19,8 +19,27 @@ const useStyles = makeStyles((theme) => ({
 			color: '#2867B2',
 		},
 	},
+	linkedInDark: {
+		color: 'white',
+		marginTop: '-0.5rem',
+		height: '2.5rem',
+		width: '2.5rem',
+		'&:hover': {
+			color: '#2867B2',
+		},
+	},
 	github: {
 		color: 'black',
+		marginTop: '-0.5rem',
+		height: '2.5rem',
+		width: '2.5rem',
+		'&:hover': {
+			backgroundColor: 'black',
+			color: '#f5f5f5',
+		},
+	},
+	githubDark: {
+		color: 'white',
 		marginTop: '-0.5rem',
 		height: '2.5rem',
 		width: '2.5rem',
@@ -38,13 +57,39 @@ const useStyles = makeStyles((theme) => ({
 			color: '#ff5757',
 		},
 	},
+
+	resumeDark: {
+		color: 'white',
+		marginTop: '-0.5rem',
+		height: '2.5rem',
+		width: '2.5rem',
+		'&:hover': {
+			color: '#ff5757',
+		},
+	},
 }));
 
 export default function Intro(props) {
 	const theme = useTheme();
 	const classes = useStyles();
+
+	let introMainContainer = 'intro-main-container';
+	let linkedin = classes.linkedIn;
+	let github = classes.github;
+	let resume = classes.resume;
+	let line1 = 'line1';
+	let line2 = 'line2';
+
+	if (props.isDarkMode) {
+		introMainContainer = 'intro-main-container-dark';
+		linkedin = classes.linkedInDark;
+		github = classes.githubDark;
+		resume = classes.resumeDark;
+		line1 = 'line1-dark';
+		line2 = 'line2-dark';
+	}
 	return (
-		<div className="intro-main-container" style={{ overflowY: 'hidden' }}>
+		<div className={introMainContainer} style={{ overflowY: 'hidden' }}>
 			<div className="greeting" style={{ overflowX: 'hidden' }}>
 				<h1>Hi, I'm Juan</h1>
 				<h2>
@@ -61,26 +106,26 @@ export default function Intro(props) {
 				</ReactTooltip>
 
 				<ul className="social-group">
-					<li className="line1"></li>
+					<li className={line1}></li>
 					<li className="link" data-tip data-for="linkedin">
 						<a
 							href="https://www.linkedin.com/in/juan-orta/"
 							target="_blank"
 						>
-							<LinkedInIcon className={classes.linkedIn} />{' '}
+							<LinkedInIcon className={linkedin} />{' '}
 						</a>
 					</li>
 					<li className="link" data-tip data-for="git">
 						<a href="https://github.com/juanorta/" target="_blank">
-							<GitHubIcon className={classes.github} />{' '}
+							<GitHubIcon className={github} />{' '}
 						</a>
 					</li>
 					<li className="link" data-tip data-for="resume">
 						<a href={resume} target="_blank">
-							<FileCopyIcon className={classes.resume} />
+							<FileCopyIcon className={resume} />
 						</a>
 					</li>
-					<li className="line2"></li>
+					<li className={line2}></li>
 				</ul>
 				{/* <div className="arrow-down">
 					<Link

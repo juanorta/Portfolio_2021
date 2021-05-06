@@ -4,6 +4,12 @@
 	height: auto;
 }
 
+.App-dark {
+	text-align: center;
+	background-color: #212121;
+	height: auto;
+}
+
 .App-logo {
 	height: 40vmin;
 	pointer-events: none;

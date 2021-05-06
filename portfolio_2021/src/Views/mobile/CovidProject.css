@@ -9,7 +9,26 @@
 	overflow-y: hidden;
 }
 
+.covid-main-container-dark {
+	background-color: transparent;
+	height: auto;
+	width: 100%;
+	text-align: left;
+	justify-content: center;
+	overflow: auto;
+	font-family: 'Open Sans';
+	overflow-y: hidden;
+	color: white;
+}
+
 .covid-main-container h1 {
+	background-color: transparent;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 2rem;
+}
+
+.covid-main-container-dark h1 {
 	background-color: transparent;
 	width: 90%;
 	margin: 0 auto;
@@ -23,6 +42,15 @@
 	margin-left: 5%;
 	margin-top: 2rem;
 	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.67);
+}
+
+.project-gif-mobile-dark {
+	/* display: none; */
+	width: 90%;
+	margin: 0 auto;
+	margin-left: 5%;
+	margin-top: 2rem;
+	box-shadow: 0 1px 6px white;
 }
 
 .mobile-sub-container {

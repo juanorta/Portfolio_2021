@@ -1,8 +1,17 @@
 .skills-main-container {
-	background-color: white;
+	background-color: transparent;
 	height: 100vh;
 	overflow: auto;
 	font-family: 'Open Sans';
+	/* display: flex; */
+}
+
+.skills-main-container-dark {
+	background-color: transparent;
+	height: 100vh;
+	overflow: auto;
+	font-family: 'Open Sans';
+	color: white;
 	/* display: flex; */
 }
 

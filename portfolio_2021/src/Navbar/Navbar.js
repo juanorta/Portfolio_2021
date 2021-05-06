@@ -25,6 +25,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import clsx from 'clsx';
 import SideDrawer from './SideDrawer/SideDrawer';
 import JuanLogo from '../Logo/portfoliologo.svg';
+import JuanLogoDark from '../Logo/portfoliologo-dark.svg';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import DarkModeToggle from 'react-dark-mode-toggle';
 import resume from '../resume/resume-portfolio.pdf';
@@ -38,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
 		border: 0,
 		color: '#1B2737',
 		height: 48,
+		width: '11rem',
 		padding: '0 30px',
 		boxShadow: 'none',
 		marginTop: '0.45rem',
@@ -139,14 +141,26 @@ export default function Navbar(props) {
 													minWidth: '40px',
 												}}
 											/> */}
-											<img
-												style={{
-													backgroundColor:
-														'transparent',
-												}}
-												src={JuanLogo}
-												height="42rem"
-											/>
+											{props.isDarkMode ? (
+												<img
+													style={{
+														backgroundColor:
+															'transparent',
+														marginTop: '4.25rem',
+													}}
+													src={JuanLogoDark}
+													height="132rem"
+												/>
+											) : (
+												<img
+													style={{
+														backgroundColor:
+															'transparent',
+													}}
+													src={JuanLogo}
+													height="42rem"
+												/>
+											)}
 										</Button>
 									</NavLink>
 								</li>

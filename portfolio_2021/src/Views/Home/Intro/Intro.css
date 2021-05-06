@@ -1,15 +1,26 @@
 .intro-main-container {
-	background-color: white;
+	background-color: transparent;
 	height: 95.2vh;
 	text-align: center;
 	font-family: 'Open Sans';
 
+	/* color: white; */
+	/* margin-top: 0rem; */
+}
+
+.intro-main-container-dark {
+	background-color: transparent;
+	height: 95.2vh;
+	text-align: center;
+	font-family: 'Open Sans';
+
+	color: white;
 	/* margin-top: 0rem; */
 }
 
 .greeting {
 	overflow-y: hidden;
-	background-color: white;
+	background-color: transparent;
 	margin-top: 6rem;
 	opacity: 1;
 	animation-name: fadeInOpacity;
@@ -62,9 +73,22 @@
 	margin-top: 9px;
 	margin-left: 2rem;
 }
+.line1-dark {
+	height: 0.15rem;
+	background-color: white;
+	width: 12rem;
+	margin-top: 9px;
+	margin-left: 2rem;
+}
 
 .line2 {
 	background-color: black;
+	height: 0.15rem;
+	width: 12rem;
+	margin-top: 9px;
+}
+.line2-dark {
+	background-color: white;
 	height: 0.15rem;
 	width: 12rem;
 	margin-top: 9px;
