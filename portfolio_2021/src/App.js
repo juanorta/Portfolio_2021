@@ -18,6 +18,7 @@ function App() {
 
 	const toggle = () => {
 		setIsDarkMode(!isDarkMode);
+		document.body.style.background = 'white';
 	};
 
 	console.log('darkmode: ' + isDarkMode);
