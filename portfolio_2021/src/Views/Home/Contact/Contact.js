@@ -202,6 +202,7 @@ export default function Contact(props) {
 						name="subject"
 					/>
 					<TextField
+						required
 						className={input}
 						InputLabelProps={{
 							classes: {
