@@ -37,6 +37,15 @@ const useStyles = makeStyles((theme) => ({
 	chip: {
 		borderRadius: '5px',
 		margin: '0.5rem',
+		borderColor: '#212121',
+		color: '#212121',
+		// backgroundColor: 'red',
+	},
+	chipDark: {
+		borderRadius: '5px',
+		margin: '0.5rem',
+		borderColor: '#ff5757',
+		color: '#ff5757',
 	},
 	viewLive: {
 		marginRight: '1rem',
@@ -52,9 +61,11 @@ export default function PetProject(props) {
 	const classes = useStyles();
 	let covidMainContainer = 'covid-main-container';
 	let gif = 'project-gif-mobile';
+	let chip = classes.chip;
 	if (props.isDarkMode) {
 		covidMainContainer = 'covid-main-container-dark';
 		gif = 'project-gif-mobile-dark';
+		chip = classes.chipDark;
 	}
 	return (
 		<div className={covidMainContainer}>
@@ -66,57 +77,57 @@ export default function PetProject(props) {
 					<h2>Technology Stack Used</h2>
 					<div className="mobile-tech-stack">
 						<Chip
-							className={classes.chip}
+							className={chip}
 							variant="outlined"
 							label="Java"
 							color="primary"
 						/>
 						<Chip
-							className={classes.chip}
+							className={chip}
 							variant="outlined"
 							label="Spring Boot"
 							color="primary"
 						/>
 						<Chip
-							className={classes.chip}
+							className={chip}
 							variant="outlined"
 							label="Spring Security"
 							color="primary"
 						/>
 						<Chip
-							className={classes.chip}
+							className={chip}
 							variant="outlined"
 							label="Spring JPA"
 							color="primary"
 						/>
 
 						<Chip
-							className={classes.chip}
+							className={chip}
 							variant="outlined"
 							label="MySQL"
 							color="primary"
 						/>
 						<Chip
-							className={classes.chip}
+							className={chip}
 							variant="outlined"
 							label="Amazon RDS"
 							color="primary"
 						/>
 
 						<Chip
-							className={classes.chip}
+							className={chip}
 							variant="outlined"
 							label="Digital Ocean"
 							color="primary"
 						/>
 						<Chip
-							className={classes.chip}
+							className={chip}
 							variant="outlined"
 							label="ReactJS"
 							color="primary"
 						/>
 						<Chip
-							className={classes.chip}
+							className={chip}
 							variant="outlined"
 							label="Material-UI"
 							color="primary"
