@@ -10,6 +10,7 @@ import emailjs from 'emailjs-com';
 import Alert from 'react-s-alert';
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/slide.css';
+import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -143,9 +144,10 @@ export default function Contact(props) {
 	return (
 		<div className={contactMainContainer} id="contact">
 			<div className="spacer-contact"></div>
-			<Grid container lg={3} md={8} className="contact-title">
-				<h1>
-					{/* {' '}
+			<Fade right>
+				<Grid container lg={3} md={8} className="contact-title">
+					<h1>
+						{/* {' '}
 					<h2
 						style={{
 							display: 'inline',
@@ -156,81 +158,83 @@ export default function Contact(props) {
 						{' '}
 						|{' '}
 					</h2> */}
-					Contact Me
-				</h1>
-			</Grid>
-			<Grid container lg={4} md={8} sm={8} className="form-grid">
-				<form className={root} onSubmit={sendEmail}>
-					<TextField
-						className={input}
-						InputLabelProps={{
-							className: input,
-						}}
-						InputProps={{
-							className: input,
-						}}
-						required
-						id="standard-required"
-						label="Name"
-						name="name"
-					/>
-					<TextField
-						className={input}
-						InputLabelProps={{
-							className: input,
-						}}
-						InputProps={{
-							className: input,
-						}}
-						required
-						id="standard-required"
-						label="Your Email"
-						type="email"
-						name="email"
-					/>
-					<TextField
-						className={input}
-						InputLabelProps={{
-							className: input,
-						}}
-						InputProps={{
-							className: input,
-						}}
-						required
-						id="standard-required"
-						label="Subject"
-						name="subject"
-					/>
-					<TextField
-						required
-						className={input}
-						InputLabelProps={{
-							classes: {
-								root: cssLabel,
-							},
-						}}
-						InputProps={{
-							className: input,
-							classes: {
-								notchedOutline: notchedOutline,
-							},
-						}}
-						// id="outlined-multiline-static"
-						label="Message"
-						multiline
-						rows={4}
-						variant="outlined"
-						name="message"
-					/>
-					<Button
-						type="submit"
-						variant="contained"
-						className={classes.button}
-					>
-						Send
-					</Button>
-				</form>
-			</Grid>
+						Contact Me
+					</h1>
+				</Grid>
+
+				<Grid container lg={4} md={8} sm={8} className="form-grid">
+					<form className={root} onSubmit={sendEmail}>
+						<TextField
+							className={input}
+							InputLabelProps={{
+								className: input,
+							}}
+							InputProps={{
+								className: input,
+							}}
+							required
+							id="standard-required"
+							label="Name"
+							name="name"
+						/>
+						<TextField
+							className={input}
+							InputLabelProps={{
+								className: input,
+							}}
+							InputProps={{
+								className: input,
+							}}
+							required
+							id="standard-required"
+							label="Your Email"
+							type="email"
+							name="email"
+						/>
+						<TextField
+							className={input}
+							InputLabelProps={{
+								className: input,
+							}}
+							InputProps={{
+								className: input,
+							}}
+							required
+							id="standard-required"
+							label="Subject"
+							name="subject"
+						/>
+						<TextField
+							required
+							className={input}
+							InputLabelProps={{
+								classes: {
+									root: cssLabel,
+								},
+							}}
+							InputProps={{
+								className: input,
+								classes: {
+									notchedOutline: notchedOutline,
+								},
+							}}
+							// id="outlined-multiline-static"
+							label="Message"
+							multiline
+							rows={4}
+							variant="outlined"
+							name="message"
+						/>
+						<Button
+							type="submit"
+							variant="contained"
+							className={classes.button}
+						>
+							Send
+						</Button>
+					</form>
+				</Grid>
+			</Fade>
 			<Alert
 				stack={{ limit: 3 }}
 				timeout={3000}

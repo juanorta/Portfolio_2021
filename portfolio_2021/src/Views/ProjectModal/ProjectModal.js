@@ -302,7 +302,7 @@ export default function ProjectModal(props) {
 									<Chip
 										className={chip}
 										variant="outlined"
-										label="Spring JPA"
+										label="Docker"
 										color="primary"
 									/>
 
@@ -322,7 +322,7 @@ export default function ProjectModal(props) {
 									<Chip
 										className={chip}
 										variant="outlined"
-										label="Digital Ocean"
+										label="AWS EC2"
 										color="primary"
 									/>
 									<Chip
@@ -352,14 +352,6 @@ export default function ProjectModal(props) {
 											a map and detailed information on
 											the left-hand side
 										</p>
-										{/* <p>
-									At the time, there weren't any online maps
-									that showed country-wide COVID-19 testing
-									sites. The only maps that existed were on
-									the local/state level. In an effort to help
-									people out from all over the country, I took
-									it upon myself to build one.
-								</p> */}
 										<p>
 											I parsed a public table on
 											https://www.goodrx.com/blog/drive-thru-coronavirus-testing-near-me/
@@ -453,23 +445,22 @@ export default function ProjectModal(props) {
 											flexibility and 'out of the box'
 											features. The authentication system
 											was built with Spring Security and
-											JSON Web Token (JWT).
+											JSON Web Token (JWT). Additionally,
+											I created REST API controllers to
+											handle all front-end requests, and a
+											AWS RDS MySQL database to store all
+											information.
 										</p>
 										<p>
-											Object models were made in Java and
-											used Jackson annotations to create
-											entity relationships and JPA
-											repository to aid in CRUD
-											operations. Additionally, I created
-											REST API controllers to handle all
-											front-end requests.
-										</p>
-										<p>
-											Finally, I used React and
+											On the frontend, I used React and
 											Material-UI to create the user
-											interface. Async/await functions
-											were used to communicate with the
-											backend.
+											interface. I modularized my code and
+											lazy loaded all the components to
+											optimize load times by 90%.
+										</p>
+										<p>
+											Fianlly, I deployed this on a Docker
+											container to an AWS EC2 instance.{' '}
 										</p>
 									</div>
 									<div className="project-buttons">
