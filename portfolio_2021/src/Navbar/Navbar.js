@@ -28,7 +28,7 @@ import JuanLogo from '../Logo/portfoliologo.svg';
 import JuanLogoDark from '../Logo/portfoliologo-dark.svg';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import DarkModeToggle from 'react-dark-mode-toggle';
-import resume from '../resume/resume-portfolio.pdf';
+import resume from '../resume/resume-portfolio-current.pdf';
 
 const drawerWidth = 300;
 

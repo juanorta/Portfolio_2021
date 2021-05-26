@@ -22,7 +22,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import DarkModeToggle from 'react-dark-mode-toggle';
-import resume from '../../resume/resume-portfolio.pdf';
+import resume from '../../resume/resume-portfolio-current.pdf';
 
 const drawerWidth = 300;
 
